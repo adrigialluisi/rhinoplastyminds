@@ -1,0 +1,758 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rhinoplasty Minds · Entregáveis</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  --dark:#0D0F12; --navy:#16324A; --navy-line:#2A4258;
+  --sky:#4FA8E0; --blue:#1E6FA3;
+  --ink:#14181D; --gray:#6B7280; --gray-d:#9CA6B4; --soft-d:#D5DCE4;
+  --line:#E3E7EB; --soft:#F1F3F5; --white:#FFFFFF;
+  --ok:#1E7A4F; --warn:#A26A12; --bad:#B4462F;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+body{background:var(--white);color:var(--ink);font-family:var(--sans);font-size:15.5px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--blue)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--sky);outline-offset:2px;border-radius:4px}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:40px}
+@media (max-width:640px){.wrap{padding-inline:16px}}
+p{margin:0}
+.band{padding-block:64px}
+.band.dark{background:var(--dark);color:#fff}
+.band.light + .band.light{border-top:1px solid var(--line)}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--blue);margin:0 0 12px}
+.dark .eyebrow{color:var(--sky)}
+h1{font-size:clamp(36px,5.4vw,58px);line-height:1.05;letter-spacing:-1.4px;font-weight:800;margin:0 0 16px}
+h2{font-size:clamp(26px,3.2vw,34px);line-height:1.15;letter-spacing:-.7px;font-weight:800;margin:0 0 14px;max-width:30ch;text-wrap:balance}
+h3{font-size:18px;letter-spacing:-.2px;font-weight:700;margin:0 0 6px;text-wrap:balance}
+.lead{font-size:17px;color:var(--gray);max-width:62ch;margin-bottom:36px}
+.dark .lead{color:var(--gray-d)}
+
+/* top bar */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:rgba(13,15,18,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid #1d2229}
+.top .wrap{display:flex;align-items:center;gap:20px;height:56px}
+.brand{display:flex;align-items:center;gap:9px;color:#fff;font-weight:700;font-size:14px;white-space:nowrap;text-decoration:none}
+.brand img{height:26px;width:auto;display:block}
+.top nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.top nav::-webkit-scrollbar{display:none}
+.top nav a{display:block;padding:7px 12px;font-size:13px;font-weight:600;color:var(--gray-d);text-decoration:none;white-space:nowrap;border-radius:6px}
+.top nav a:hover{color:#fff;background:#1b2027}
+.top nav a.on{color:#fff;background:var(--navy)}
+@media (max-width:560px){.brand img{height:18px}}
+
+/* home */
+.hero{display:block}
+.hero .logo{display:block;width:min(460px,100%);height:auto;margin:0 0 36px}
+.hero .sub{font-size:19px;color:var(--gray-d);max-width:48ch}
+
+.phases{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+@media (max-width:860px){.phases{grid-template-columns:1fr}}
+.phase{background:var(--navy);border-radius:8px;padding:26px 24px;display:flex;flex-direction:column;gap:14px}
+.phase.off{background:#11161d;border:1px solid #1f2731}
+.phase .num{font-size:40px;font-weight:800;color:var(--sky);line-height:1}
+.phase.off .num{color:#3b4a5b}
+.phase h3{color:#fff;font-size:20px;margin:0}
+.phase .when{font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--gray-d);padding-bottom:14px;border-bottom:1px solid var(--navy-line)}
+.phase.off .when{border-color:#1f2731}
+.status{font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:3px 9px;border-radius:999px;border:1px solid currentColor;align-self:flex-start}
+.status.live{color:var(--sky)}
+.status.soon{color:#6b7a8c}
+.dl{display:grid;gap:8px;margin:0;padding:0;list-style:none}
+.dl li a,.dl li span{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:11px 14px;border-radius:6px;font-size:14.5px;font-weight:600;text-decoration:none}
+.dl li a{background:rgba(79,168,224,.12);color:#fff}
+.dl li a:hover{background:rgba(79,168,224,.22)}
+.dl li a::after{content:"→";color:var(--sky)}
+.dl li span{color:#7d8b9b;background:rgba(255,255,255,.03)}
+.dl li span em{font-style:normal;font-size:11.5px;font-weight:600;color:#5d6b7b}
+
+/* icon list */
+.ilist{display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
+.it{display:grid;grid-template-columns:44px 1fr;gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}
+.dark .it{border-color:var(--navy-line)}
+.it svg{width:40px;height:40px;color:var(--sky)}
+.it p{color:var(--gray);font-size:15px}
+.dark .it p{color:var(--gray-d)}
+@media (max-width:760px){.ilist{grid-template-columns:1fr}}
+
+.callout{background:var(--soft);border-radius:6px;padding:18px 26px;margin-top:32px;font-size:16px}
+.callout b{color:var(--blue)}
+.dark .callout{background:var(--navy);color:#fff}
+.dark .callout b{color:var(--sky)}
+
+/* site mock */
+.mock{background:#1B3552;border-radius:10px;padding:18px 20px 22px;border:1px solid #2A4B6E}
+.mock-bar{display:flex;gap:14px;flex-wrap:wrap;font-size:11px;letter-spacing:.4px;color:#cfe0f1;margin-bottom:16px;text-transform:uppercase}
+.mock-bar b{font-size:14px;text-transform:none;letter-spacing:0;margin-right:auto;color:#fff}
+.mock-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.mock-card{background:#14304D;border-radius:8px;padding:10px}
+.mock-vid{aspect-ratio:16/9;background:#000;border-radius:6px;position:relative;max-width:100%}
+.mock-vid span{position:absolute;left:8px;bottom:6px;font-size:10px;color:#ddd}
+.mock-card i{display:block;font-style:normal;font-size:10.5px;color:#56C27F;margin-top:8px}
+.mock-card b{display:block;font-size:12.5px;color:#F08A2C;line-height:1.25;margin-top:2px}
+.mock-card small{font-size:10.5px;color:#e8eef5}
+@media (max-width:640px){.mock-cards{grid-template-columns:1fr}}
+.two{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:start}
+@media (max-width:900px){.two{grid-template-columns:1fr}}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:8px;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.flow div{padding:16px 16px;border-right:1px solid var(--line);font-size:14px}
+.flow div:last-child{border-right:none}
+.flow b{display:block;font-size:12px;letter-spacing:.4px;text-transform:uppercase;color:var(--blue);margin-bottom:4px}
+.flow p{color:var(--gray)}
+@media (max-width:760px){.flow{grid-template-columns:1fr 1fr}.flow div:nth-child(2){border-right:none}.flow div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:900px){.cols3{grid-template-columns:1fr}}
+.box{background:var(--navy);border-radius:8px;padding:24px}
+.box h3{color:#fff;padding-bottom:12px;margin-bottom:12px;border-bottom:1px solid var(--navy-line)}
+.box ul{margin:0;padding-left:18px;color:var(--soft-d);font-size:14.5px;display:grid;gap:8px}
+
+/* kpis */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.kpi{background:var(--navy);border-radius:8px;padding:22px}
+.kpi b{display:block;font-size:34px;font-weight:800;letter-spacing:-1px;color:var(--sky);font-variant-numeric:tabular-nums;line-height:1.1}
+.kpi span{display:block;font-size:13.5px;color:var(--soft-d);margin-top:8px}
+.kpi small{display:block;font-size:11.5px;color:var(--gray-d);margin-top:8px}
+@media (max-width:900px){.kpis{grid-template-columns:1fr 1fr}}
+@media (max-width:460px){.kpis{grid-template-columns:1fr}}
+
+/* chart */
+.chart{position:relative;margin-top:8px}
+.scroll{overflow-x:auto}
+#bars{display:block;width:100%;min-width:620px;height:auto}
+#bars text{font-family:var(--sans)}
+.tip{position:absolute;pointer-events:none;background:var(--ink);color:#fff;font-size:12.5px;padding:8px 10px;border-radius:6px;line-height:1.4;max-width:260px;opacity:0;transition:opacity .12s;z-index:5}
+.tip.show{opacity:1}
+.stats{display:flex;gap:28px;flex-wrap:wrap;margin-top:18px;font-size:14px;color:var(--gray)}
+.stats b{color:var(--ink);font-size:20px;font-weight:800;display:block;font-variant-numeric:tabular-nums}
+
+/* competitor cards */
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:860px){.cgrid{grid-template-columns:1fr}}
+.cc{background:#fff;border:1px solid var(--line);border-radius:10px;padding:24px;display:flex;flex-direction:column;gap:14px}
+.cc.ref{border:2px solid var(--sky)}
+.cc-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.cc h3{margin:0}
+.who{font-size:13px;color:var(--gray);margin-top:2px}
+.price{text-align:right;white-space:nowrap}
+.price b{display:block;font-size:22px;font-weight:800;letter-spacing:-.5px;font-variant-numeric:tabular-nums}
+.price small{font-size:12px;color:var(--gray)}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--blue);background:#E8F2FB;border-radius:4px;padding:3px 8px;margin-right:6px}
+.cc dl{display:grid;grid-template-columns:110px 1fr;gap:8px 14px;margin:0;font-size:14px;padding-top:14px;border-top:1px solid var(--line)}
+.cc dt{color:var(--gray);font-weight:600}
+.cc dd{margin:0}
+.cc dd ul{margin:0;padding-left:16px}
+.cc .src{font-size:12.5px;margin-top:auto}
+@media (max-width:480px){.cc dl{grid-template-columns:1fr;gap:2px}.cc dd{margin-bottom:8px}.cc-top{flex-direction:column}.price{text-align:left}}
+
+.band.pres{background:#EAF1F7}
+.band.pres .cc{border-color:#D3E1EE}
+.band.pres .tbl{background:#fff}
+.band.pres + .band.light{border-top:none}
+.models{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:12px}
+@media (max-width:760px){.models{grid-template-columns:1fr}}
+.model-col{border:1px solid var(--line);border-radius:10px;padding:24px;display:flex;flex-direction:column;gap:10px}
+.model-col .mk{font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--blue)}
+.model-col ul{margin:0;padding-left:18px;color:var(--gray);font-size:14.5px;display:grid;gap:4px}
+.model-col .range{margin-top:auto;padding-top:14px;border-top:1px solid var(--line)}
+.model-col .range b{display:block;font-size:24px;font-weight:800;letter-spacing:-.5px;font-variant-numeric:tabular-nums}
+.model-col .range span{font-size:13px;color:var(--gray)}
+/* dark cards for other specialties */
+.ogrid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media (max-width:760px){.ogrid{grid-template-columns:1fr}}
+.oc{background:var(--navy);border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:14px}
+.oc h3{color:#fff;margin:0}
+.oc .who{color:var(--gray-d)}
+.oc h4{font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--sky);margin:0 0 6px}
+.oc ul{margin:0;padding-left:16px;font-size:14px;color:var(--soft-d);display:grid;gap:5px}
+.oc section{padding-top:14px;border-top:1px solid var(--navy-line)}
+.oc .lesson{margin-top:auto;font-size:14px;color:#fff;background:rgba(79,168,224,.12);border-radius:6px;padding:12px 14px}
+.oc .lesson b{color:var(--sky)}
+
+/* table */
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:980px}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--blue);background:#fff;position:sticky;top:0}
+tr:last-child td{border-bottom:none}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.ref td{background:#EEF6FC}
+.y{color:var(--ok);font-weight:700}.p{color:var(--warn);font-weight:700}.n{color:#9CA3AF}
+
+.takeaways{display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
+.tk{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:22px 0;border-bottom:1px solid var(--navy-line)}
+.tk .n{font-size:28px;font-weight:800;color:var(--sky);line-height:1}
+.tk p{color:var(--gray-d);font-size:15px}
+.tk h3{color:#fff}
+@media (max-width:760px){.takeaways{grid-template-columns:1fr}}
+
+.subnav{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}
+.subnav a{font-size:13px;font-weight:600;color:var(--sky);text-decoration:none;border:1px solid var(--navy-line);border-radius:999px;padding:6px 14px}
+.subnav a:hover{background:var(--navy)}
+.next{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.next a{font-weight:700;text-decoration:none}
+details.src{margin-top:24px;font-size:13px;color:var(--gray)}
+details.src summary{cursor:pointer;font-weight:600}
+details.src ul{columns:2;column-gap:32px;padding-left:18px;margin-top:10px}
+details.src li{break-inside:avoid;margin-bottom:4px}
+@media (max-width:700px){details.src ul{columns:1}}
+footer{background:var(--dark);border-top:1px solid #1d2229;padding-block:18px;font-size:12.5px;color:var(--gray-d)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio"><img src="logo-rhinoplasty-minds.png" alt="Rhinoplasty Minds"></a>
+    <nav aria-label="Entregáveis">
+      <a href="#inicio" data-v="inicio">Início</a>
+      <a href="#hoje" data-v="hoje">O que temos hoje</a>
+      <a href="#mercado" data-v="mercado">Mercado e concorrentes</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ================= INÍCIO ================= -->
+<div class="view" id="v-inicio" data-view="inicio">
+  <section class="band dark">
+    <div class="wrap">
+      <div class="hero">
+        <img class="logo" src="logo-rhinoplasty-minds.png" alt="Rhinoplasty Minds">
+        <p class="eyebrow">Consultoria · Entregáveis</p>
+        <h1>Estruturação do curso de rinoplastia</h1>
+        <p class="sub">Posicionamento, plataforma e modelo de negócio</p>
+      </div>
+      <div class="phases">
+        <div class="phase">
+          <div class="num">01</div>
+          <h3>Diagnóstico</h3>
+          <div class="when">Setembro</div>
+          <span class="status live">Em entrega</span>
+          <ul class="dl">
+            <li><a href="#hoje">Análise do que temos hoje</a></li>
+            <li><a href="#mercado">Mercado e concorrentes</a></li>
+            <li><span>Análise de ferramentas <em>em breve</em></span></li>
+            <li><span>Análise de público <em>em breve</em></span></li>
+          </ul>
+        </div>
+        <div class="phase off">
+          <div class="num">02</div>
+          <h3>Desenvolvimento</h3>
+          <div class="when">Outubro – Novembro</div>
+          <span class="status soon">Próxima fase</span>
+          <ul class="dl">
+            <li><span>Posicionamento e modelo comercial</span></li>
+            <li><span>Desenho dos módulos do curso</span></li>
+          </ul>
+        </div>
+        <div class="phase off">
+          <div class="num">03</div>
+          <h3>Implantação</h3>
+          <div class="when">Novembro – Dezembro</div>
+          <span class="status soon">Próxima fase</span>
+          <ul class="dl">
+            <li><span>Configuração da plataforma</span></li>
+            <li><span>Migração do acervo</span></li>
+            <li><span>Nova página e lançamento</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= O QUE TEMOS HOJE ================= -->
+<div class="view" id="v-hoje" data-view="hoje" hidden>
+  <section class="band dark">
+    <div class="wrap">
+      <p class="eyebrow">Fase 1 · Diagnóstico · 01</p>
+      <h2>O que temos hoje</h2>
+      <p class="lead">Um acervo valioso de webinars desde 2023, sustentado por uma estrutura que depende de trabalho manual e de um site que a equipe não consegue atualizar sozinha.</p>
+      <div class="ilist">
+        <div class="it"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm6.9 6h-3a15.7 15.7 0 0 0-1.4-3.6A8 8 0 0 1 18.9 8zM12 4c.8 1.2 1.5 2.5 1.9 4h-3.8c.4-1.5 1.1-2.8 1.9-4zM4.3 14a8.2 8.2 0 0 1 0-4h3.4a16.5 16.5 0 0 0 0 4zm.8 2h3a15.7 15.7 0 0 0 1.4 3.6A8 8 0 0 1 5.1 16zm3-8h-3a8 8 0 0 1 4.3-3.6C8.9 5.5 8.4 6.7 8.1 8zM12 20c-.8-1.2-1.5-2.5-1.9-4h3.8c-.4 1.5-1.1 2.8-1.9 4zm2.3-6H9.7a14.7 14.7 0 0 1 0-4h4.6a14.7 14.7 0 0 1 0 4zm.3 5.6c.6-1.1 1.1-2.3 1.4-3.6h3a8 8 0 0 1-4.4 3.6zm1.7-5.6a16.5 16.5 0 0 0 0-4h3.4a8.2 8.2 0 0 1 0 4z"/></svg><div><h3>Site em WordPress com login</h3><p>Login básico dá acesso ao acervo. Menu: próximos webinares, cursos online, webinares anteriores e eventos em rinoplastia.</p></div></div>
+        <div class="it"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 10.5V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3.5l4 4v-11z"/></svg><div><h3>Webinars ao vivo pelo Zoom</h3><p>Plano pago do Zoom para transmitir. Cada encontro tem cerca de 1 hora.</p></div></div>
+        <div class="it"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-8 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 2c-2.7 0-8 1.3-8 4v3h16v-3c0-2.7-5.3-4-8-4zm8 0h-1c1.2.9 2 2 2 4v3h7v-3c0-2.7-5.3-4-8-4z"/></svg><div><h3>Formato com convidado</h3><p>Dr. Marco recebe um especialista que mostra casos e explica como desenvolve a técnica em uma área da rinoplastia.</p></div></div>
+        <div class="it"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm5.5-3.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/></svg><div><h3>Instagram e WhatsApp</h3><p>Canais de divulgação da agenda e de contato direto com a comunidade de médicos.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band light">
+    <div class="wrap">
+      <p class="eyebrow">Como está hoje</p>
+      <h2>O acervo e o caminho de cada webinar</h2>
+      <div class="two">
+        <div>
+          <div class="mock" aria-label="Reprodução simplificada da página de webinares anteriores">
+            <div class="mock-bar"><b>Rhinoplasty Minds</b><span>Próximos webinares</span><span>Cursos online</span><span>Webinares anteriores</span></div>
+            <div class="mock-cards">
+              <div class="mock-card"><div class="mock-vid"><span>▶ 0:00 / 56:15</span></div><i>Jan/25</i><b>Desafios no nariz afrodescendentes</b><small>Edson Freitas</small></div>
+              <div class="mock-card"><div class="mock-vid"><span>▶ 0:00 / 56:15</span></div><i>Fev/25</i><b>Manejo do dorso ósseo e linhas estéticas nasais</b><small>Marina Serrato</small></div>
+              <div class="mock-card"><div class="mock-vid"><span>▶ 0:00 / 57:54</span></div><i>Mar/25</i><b>Tratamento do scroll</b><small>Isabela Olivetti</small></div>
+            </div>
+          </div>
+          <p class="muted" style="font-size:12.5px;color:var(--gray);margin-top:10px">Reprodução da página “Webinares anteriores”, organizada por ano.</p>
+        </div>
+        <div>
+          <div class="flow">
+            <div><b>1 · Ao vivo</b><p>Transmissão no Zoom</p></div>
+            <div><b>2 · Gravação</b><p>Arquivo gerado pelo Zoom</p></div>
+            <div><b>3 · Upload</b><p>Subida manual no WordPress</p></div>
+            <div><b>4 · Acervo</b><p>Card por ano, com data, tema e convidado</p></div>
+          </div>
+          <p style="margin-top:16px;color:var(--gray);font-size:15px">Cada card usa o player padrão do navegador, que mostra a opção de baixar o vídeo. Os títulos e convidados já formam um mapa de temas: dorso, ponta, nariz étnico, revisional.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band light">
+    <div class="wrap">
+      <p class="eyebrow">Diagnóstico</p>
+      <h2>O que funciona, o que trava e o que dá para reaproveitar</h2>
+      <div class="cols3">
+        <div class="box"><h3>O que funciona</h3><ul><li>Webinars mensais desde 2023, com convidados reconhecidos</li><li>Formato de casos reais, que é o que o cirurgião procura</li><li>Audiência formada e canais diretos (Instagram, WhatsApp)</li><li>Marca associada a vários professores, não a um único método</li></ul></div>
+        <div class="box"><h3>O que trava</h3><ul><li>Vídeos podem ser baixados direto da página: risco de cópia e compartilhamento</li><li>Não está claro onde os vídeos estão hospedados; arquivos pesados deixam a página lenta</li><li>Cada webinar exige upload manual</li><li>Acervo organizado só por data, sem trilha por tema</li></ul></div>
+        <div class="box"><h3>O que dá para reaproveitar</h3><ul><li>Todo o acervo gravado, reeditado em capítulos por tema</li><li>A lista de convidados como corpo docente do curso</li><li>A base de cadastrados como primeira lista de venda</li><li>O webinar mensal como porta de entrada gratuita</li></ul></div>
+      </div>
+      <div class="next" style="margin-top:36px"><a href="#inicio">← Voltar aos entregáveis</a><a href="#mercado">Mercado e concorrentes →</a></div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= MERCADO ================= -->
+<div class="view" id="v-mercado" data-view="mercado" hidden>
+  <section class="band dark">
+    <div class="wrap">
+      <p class="eyebrow">Fase 1 · Diagnóstico · 02</p>
+      <h2>Mercado e concorrentes</h2>
+      <p class="lead">O Brasil é o maior mercado de cirurgia estética do mundo. A formação em rinoplastia se divide em dois modelos: cursos online gravados, que custam em média R$ 6,3 mil, e formações presenciais com cirurgias ao vivo, fellowships e dissecção, que vão de R$ 7,5 mil a R$ 37 mil.</p>
+      <div class="kpis">
+        <div class="kpi"><b>102.653</b><span>rinoplastias estéticas no Brasil em 2024</span><small>ISAPS Global Survey 2024</small></div>
+        <div class="kpi"><b>7.715</b><span>otorrinolaringologistas no Brasil</span><small>Demografia Médica 2025</small></div>
+        <div class="kpi"><b>6.700+</b><span>cirurgiões plásticos na SBCP</span><small>SBCP</small></div>
+        <div class="kpi"><b>~14,4 mil</b><span>público-alvo somado (ORL + plástica)</span><small>Soma das duas bases</small></div>
+      </div>
+      <div class="subnav"><a href="#m-publico">Público</a><a href="#m-cenario">Cenário dos cursos</a><a href="#m-concorrentes">Cursos online</a><a href="#m-tabela">Comparativo online</a><a href="#m-presencial">Formação presencial</a><a href="#m-outras">Outras especialidades</a><a href="#m-leitura">Leitura para a RM</a></div>
+    </div>
+  </section>
+
+  <section class="band light" id="m-publico">
+    <div class="wrap">
+      <p class="eyebrow">Mercado de rinoplastia no Brasil</p>
+      <h2>Quem opera nariz e pode comprar o curso</h2>
+      <div class="ilist">
+        <div class="it"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 20h18v2H3zM5 10h3v8H5zm5.5-4h3v12h-3zM16 13h3v5h-3z"/></svg><div><h3>1º país em cirurgia estética</h3><p>2,35 milhões de cirurgias estéticas em 2024. A rinoplastia responde por 4,4% delas, com 102.653 procedimentos.</p></div></div>
+        <div class="it"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-8 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 2c-2.7 0-8 1.3-8 4v3h16v-3c0-2.7-5.3-4-8-4zm8 0h-1c1.2.9 2 2 2 4v3h7v-3c0-2.7-5.3-4-8-4z"/></svg><div><h3>Duas especialidades fazem rinoplastia</h3><p>7.715 otorrinolaringologistas (idade média 52,7 anos, mais da metade no Sudeste) e 6.700+ cirurgiões plásticos associados à SBCP.</p></div></div>
+        <div class="it"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.9V17h2V9zM5 13.2v4L12 21l7-3.8v-4L12 17z"/></svg><div><h3>Renovação constante</h3><p>Só a cirurgia plástica tinha 481 residentes em 2024, 160 no primeiro ano. Todo ano entra uma nova turma de compradores.</p></div></div>
+        <div class="it"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><div><h3>Borda do público</h3><p>Cirurgiões de cabeça e pescoço e crânio-maxilo-faciais, e a América Latina em espanhol, que vários concorrentes já atendem.</p></div></div>
+      </div>
+      <div class="callout"><b>Leitura:</b> nem todo otorrino ou plástico opera nariz. Se 20 a 30% das duas bases fazem rinoplastia com frequência, o público comprador fica entre 3 e 4 mil cirurgiões.</div>
+    </div>
+  </section>
+
+  <section class="band light" id="m-cenario">
+    <div class="wrap">
+      <p class="eyebrow">Cenário dos cursos</p>
+      <h2>Dois modelos de formação: online gravado e presencial com cirurgia</h2>
+      <div class="models">
+        <div class="model-col">
+          <div class="mk">Online gravado</div>
+          <h3>Aulas e cirurgias editadas, no ritmo do aluno</h3>
+          <ul><li>Aulas teóricas, cirurgias narradas e artigos em PDF</li><li>Pagamento único, 12 meses de acesso, 12x no cartão, garantia de 7 dias</li><li>Maioria vendida pela Hotmart</li><li>Contato ao vivo como bônus: grupo VIP, suporte, masterclass</li></ul>
+          <div class="range"><b>R$ 1,1 – 9,5 mil</b><span>média de R$ 6,3 mil</span></div>
+        </div>
+        <div class="model-col">
+          <div class="mk">Presencial com cirurgia</div>
+          <h3>Cirurgia ao vivo, dissecção e fellowship</h3>
+          <ul><li>Imersões de 3 a 5 dias com cirurgias ao vivo e cadáver</li><li>Fellowships de 1 mês a 1 ano e pós lato sensu com prática em centro cirúrgico</li><li>Turmas de 4 a 6 alunos, vendidas por edição, às vezes por seleção</li><li>Certificado do instituto ou reconhecido pelo MEC</li></ul>
+          <div class="range"><b>R$ 7,5 – 37 mil</b><span>por edição</span></div>
+        </div>
+      </div>
+      <div class="ilist" style="margin:12px 0 36px">
+        <div class="it"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"/></svg><div><h3>Um cirurgião, um método</h3><p>Quase todos levam o nome do autor ou de uma técnica própria: Escultural, R.F.E., Mastering Preservation. O Perface é a exceção, com aulas de vários convidados.</p></div></div>
+        <div class="it"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 17h2v4H3zm4-4h2v8H7zm4-4h2v12h-2zm4 3h2v9h-2zm4-7h2v16h-2z"/></svg><div><h3>Os maiores combinam os dois</h3><p>MF Training, Rhinoface, Perface e Raphael Gomes vendem o online como entrada e o presencial como degrau acima.</p></div></div>
+      </div>
+      <h3>Preço à vista dos cursos online</h3>
+      <div class="chart" id="chartbox">
+        <div class="scroll"><svg id="bars" role="img" aria-label="Preço à vista de sete cursos online, de R$ 1.080 a R$ 9.459"></svg></div>
+        <div class="tip" id="tip"></div>
+      </div>
+      <div class="stats"><div><b>R$ 6.304</b>média</div><div><b>R$ 6.990</b>mediana</div><div><b>R$ 1.080 – 9.459</b>faixa</div><div><b>1 de 8</b>sem preço público</div></div>
+    </div>
+  </section>
+
+  <section class="band light" id="m-concorrentes">
+    <div class="wrap">
+      <p class="eyebrow">Concorrentes · Online</p>
+      <h2>Cursos online, em detalhe</h2>
+      <p class="lead">Estrutura, preço e modelo de contrato de cada um. O card em destaque tem o formato mais próximo da Rhinoplasty Minds.</p>
+      <div class="cgrid">
+
+        <article class="cc ref">
+          <div class="cc-top"><div><span class="tag">Mais parecido com a RM</span><h3>Rhino Masterclass · Perface</h3><div class="who">Dr. Fernando Nakamura · Perface Academy</div></div><div class="price"><b>R$ 1.080</b><small>ou 12x R$ 106</small></div></div>
+          <dl>
+            <dt>Estrutura</dt><dd>Masterclasses gravadas com cirurgiões convidados do Brasil e do exterior (Toriumi, Akbas e outros). Novas aulas entram durante o ano.</dd>
+            <dt>Formato</dt><dd>100% online, gravado</dd>
+            <dt>Contrato</dt><dd>Pagamento único · 1 ano de acesso · garantia de 7 dias · Hotmart</dd>
+            <dt>Degrau acima</dt><dd>HRET: imersão presencial em Miami com cadáver, US$ 6.900+</dd>
+          </dl>
+          <p class="src"><a href="https://perfaceacademy.com/rhino-masterclass/" target="_blank" rel="noopener">perfaceacademy.com</a></p>
+        </article>
+
+        <article class="cc">
+          <div class="cc-top"><div><h3>Rhinoface Academy</h3><div class="who">Drs. Tomás, José e Lucas Patrocínio</div></div><div class="price"><b>R$ 6.990</b><small>ou R$ 722,93/mês</small></div></div>
+          <dl>
+            <dt>Estrutura</dt><dd>Aulas teóricas avançadas, cirurgias comentadas, anatomia profunda e grupo VIP para discussão de casos</dd>
+            <dt>Planos</dt><dd>RHINO ou FACE: R$ 6.990 · RHINO + FACE: R$ 8.388 (40% off)</dd>
+            <dt>Contrato</dt><dd>À vista ou mensal · boleto, cartão, PIX · certificado próprio</dd>
+            <dt>Extras</dt><dd>Fellowship presencial de 1 mês (planos com RHINO) e desconto nos congressos da academia</dd>
+          </dl>
+          <p class="src"><a href="https://www.rhinofaceacademy.com/" target="_blank" rel="noopener">rhinofaceacademy.com</a></p>
+        </article>
+
+        <article class="cc">
+          <div class="cc-top"><div><h3>Mastering Preservation</h3><div class="who">Dr. Guilherme Sella</div></div><div class="price"><b>R$ 8.900</b><small>1º ano, em até 12x</small></div></div>
+          <dl>
+            <dt>Estrutura</dt><dd>Rinoplastia com foco em preservação: experiência pessoal, revisão de bibliografia, vídeos de técnica, cirurgias editadas e artigos científicos</dd>
+            <dt>Formato</dt><dd>Online, com primeira aula grátis no YouTube em português, inglês e espanhol</dd>
+            <dt>Contrato</dt><dd>Assinatura do 1º ano em até 12x</dd>
+            <dt>Renovação</dt><dd><b>50% de desconto</b> na renovação, que passa a dar acesso vitalício</dd>
+            <dt>Outros</dt><dd>Outras modalidades de ensino para ORL, plásticos e CMF; inscrição e preço não aparecem no site</dd>
+          </dl>
+          <p class="src"><a href="https://drsella.com.br/ensino-online" target="_blank" rel="noopener">drsella.com.br</a></p>
+        </article>
+
+        <article class="cc">
+          <div class="cc-top"><div><h3>RhinoTips Academy</h3><div class="who">Dr. Renato Sousa · Rinoplastia Escultural</div></div><div class="price"><b>R$ 8.100</b><small>ou US$ 1.577</small></div></div>
+          <dl>
+            <dt>Estrutura</dt><dd><ul><li>Introdução à Rinoplastia Escultural</li><li>Consultório e planejamento pré-cirúrgico</li><li>Brocas diamantadas</li><li>3 técnicas-chave (osteoplastia, split spreader flap, suturas no supratip)</li><li>Execução da cirurgia</li><li>Pós-operatório e registro</li></ul></dd>
+            <dt>Formato</dt><dd>Cirurgias gravadas em alta definição com realidade aumentada e suporte direto do autor</dd>
+            <dt>Contrato</dt><dd>Investimento único · 12 meses de acesso · garantia de 7 dias</dd>
+          </dl>
+          <p class="src"><a href="https://rhinotipsacademy.com/" target="_blank" rel="noopener">rhinotipsacademy.com</a></p>
+        </article>
+
+        <article class="cc">
+          <div class="cc-top"><div><h3>Virtual Fellow · Instituto Scheibel</h3><div class="who">Dr. Guilherme Scheibel · Método Scheibel</div></div><div class="price"><b>Sob consulta</b><small>via WhatsApp</small></div></div>
+          <dl>
+            <dt>Estrutura</dt><dd><ul><li><b>Rinoplastia Essencial</b> (iniciantes): método TRHW, extensor septal, supratip e infratip, moldes, captação de pacientes</li><li><b>Rinoplastia Escultural</b> (avançado): 300+ cirurgias gravadas, 350+ horas, rinoplastia ultrassônica</li><li><b>Masterclass</b>: edições temáticas ao vivo com o autor</li></ul></dd>
+            <dt>Comunidade</dt><dd>Grupo para discussão de casos com médicos de vários países</dd>
+            <dt>Contrato</dt><dd>Não divulgado; contato por WhatsApp sem resposta até agora</dd>
+          </dl>
+          <p class="src"><a href="https://institutoscheibel.com/para-medicos/virtual-fellow/" target="_blank" rel="noopener">institutoscheibel.com</a></p>
+        </article>
+
+        <article class="cc">
+          <div class="cc-top"><div><h3>Método R.F.E. Online</h3><div class="who">Dr. Maicon Paiva</div></div><div class="price"><b>R$ 9.459</b><small>ou 12x R$ 978,28</small></div></div>
+          <dl>
+            <dt>Estrutura</dt><dd>Anatomia e proporções, avaliação pré-operatória, legislação e ética, técnica (acesso fechado, estruturação, ponta, alectomia, nariz negroide, splint), intercorrências e necrose, reabordagem, e 8 cirurgias completas comentadas</dd>
+            <dt>Captação</dt><dd>Semana de aulas gratuitas online antes da abertura de vendas</dd>
+            <dt>Contrato</dt><dd>Pagamento único · garantia de 7 dias · Hotmart</dd>
+          </dl>
+          <p class="src"><a href="https://hotmart.com/pt-br/marketplace/produtos/metodo-r-f-e-online-rinoplastia-dr-maicon-paiva/P98930346B" target="_blank" rel="noopener">Hotmart</a></p>
+        </article>
+
+        <article class="cc">
+          <div class="cc-top"><div><h3>Rinoplastia: Formação Avançada</h3><div class="who">Dr. Renato Bittar</div></div><div class="price"><b>R$ 4.500</b><small>ou 12x R$ 465,40</small></div></div>
+          <dl>
+            <dt>Estrutura</dt><dd>Do básico ao avançado: aulas estruturadas, cirurgias gravadas passo a passo e resolução de problemas no intraoperatório</dd>
+            <dt>Público</dt><dd>Quem está começando ou quer subir de nível</dd>
+            <dt>Contrato</dt><dd>Pagamento único · garantia de 7 dias · Hotmart</dd>
+          </dl>
+          <p class="src"><a href="https://hotmart.com/pt-br/marketplace/produtos/rinosplastia-formacao-avancada-e-excelencia-tecnica/P105258175N" target="_blank" rel="noopener">Hotmart</a></p>
+        </article>
+
+        <article class="cc">
+          <div class="cc-top"><div><h3>Curso de Facelift · Face and Art</h3><div class="who">Dr. Raphael Gomes</div></div><div class="price"><b>R$ 5.100</b><small>PIX · ou 12x R$ 500 · de R$ 7.500</small></div></div>
+          <dl>
+            <dt>Estrutura</dt><dd>14 aulas teóricas (anatomia, deep plane, complicações, lipoenxertia, pescoço, sobrancelha, direito médico, marketing), cirurgias gravadas e narradas, artigos e livros em PDF</dd>
+            <dt>Contrato</dt><dd>Pagamento único com preço promocional por tempo limitado · certificado de conclusão</dd>
+            <dt>Nota</dt><dd>Curso de face, não de nariz: mostra que o mesmo comprador também quer face</dd>
+          </dl>
+          <p class="src"><a href="https://www.drraphaelgomes.com.br/lp/curso-facelift" target="_blank" rel="noopener">drraphaelgomes.com.br</a></p>
+        </article>
+
+
+      </div>
+    </div>
+  </section>
+
+  <section class="band light" id="m-tabela">
+    <div class="wrap">
+      <p class="eyebrow">Comparativo</p>
+      <h2>Cursos online lado a lado</h2>
+      <div class="tbl">
+        <table>
+          <thead><tr><th>Curso</th><th>Autor</th><th>À vista</th><th>Parcelado</th><th>Acesso</th><th>Renovação</th><th>Vários professores</th><th>Cirurgias gravadas</th><th>Comunidade</th><th>Presencial</th><th>Plataforma</th></tr></thead>
+          <tbody>
+            <tr class="ref"><td><b>Rhino Masterclass</b></td><td>Nakamura</td><td class="num">R$ 1.080</td><td class="num">12x R$ 106</td><td>1 ano</td><td class="n">n/d</td><td class="y">Sim</td><td class="p">Parcial</td><td class="n">Não</td><td class="p">À parte (HRET)</td><td>Hotmart</td></tr>
+            <tr><td><b>Rhinoface Academy</b></td><td>Patrocínio</td><td class="num">R$ 6.990</td><td class="num">R$ 722,93/mês</td><td>n/d</td><td class="n">n/d</td><td class="p">Família</td><td class="y">Sim</td><td class="y">Grupo VIP</td><td class="y">1 mês</td><td>Própria</td></tr>
+            <tr><td><b>Mastering Preservation</b></td><td>Sella</td><td class="num">R$ 8.900</td><td class="num">até 12x</td><td>1 ano</td><td class="y">50% off</td><td class="n">Não</td><td class="y">Sim</td><td class="n">Não</td><td class="p">Outras modalidades</td><td>Própria</td></tr>
+            <tr><td><b>RhinoTips Academy</b></td><td>Renato Sousa</td><td class="num">R$ 8.100</td><td class="num">n/d</td><td>12 meses</td><td class="n">n/d</td><td class="n">Não</td><td class="y">Sim, HD + RA</td><td class="p">Suporte</td><td class="p">Imersão à parte</td><td>Própria</td></tr>
+            <tr><td><b>Virtual Fellow</b></td><td>Scheibel</td><td class="num">n/d</td><td class="num">n/d</td><td>n/d</td><td class="n">n/d</td><td class="n">Não</td><td class="y">300+</td><td class="y">Sim</td><td class="n">Não</td><td>Própria</td></tr>
+            <tr><td><b>Método R.F.E.</b></td><td>Maicon Paiva</td><td class="num">R$ 9.459</td><td class="num">12x R$ 978,28</td><td>n/d</td><td class="n">n/d</td><td class="n">Não</td><td class="y">8</td><td class="n">Não</td><td class="n">Não</td><td>Hotmart</td></tr>
+            <tr><td><b>Formação Avançada</b></td><td>Renato Bittar</td><td class="num">R$ 4.500</td><td class="num">12x R$ 465,40</td><td>n/d</td><td class="n">n/d</td><td class="n">Não</td><td class="y">Sim</td><td class="n">Não</td><td class="n">Não</td><td>Hotmart</td></tr>
+            <tr><td><b>Curso de Facelift</b></td><td>Raphael Gomes</td><td class="num">R$ 5.100</td><td class="num">12x R$ 500</td><td>n/d</td><td class="n">n/d</td><td class="n">Não</td><td class="y">Sim</td><td class="n">Não</td><td class="n">Não</td><td>Própria</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:12.5px;color:var(--gray);margin-top:10px">n/d: não divulgado. Na Mastering Preservation, a renovação com 50% de desconto dá acesso vitalício.</p>
+    </div>
+  </section>
+
+  <section class="band light pres" id="m-presencial">
+    <div class="wrap">
+      <p class="eyebrow">Concorrentes · Presencial</p>
+      <h2>Formação presencial com cirurgia</h2>
+      <p class="lead">Imersões, fellowships e pós-graduação em que o aluno assiste ou opera casos reais, ou disseca em cadáver. Preço por edição e poucas vagas.</p>
+      <div class="cgrid">
+
+        <article class="cc">
+          <div class="cc-top"><div><h3>Magic Week · MF Training</h3><div class="who">Dr. Mário Ferraz · Campinas (SP)</div></div><div class="price"><b>R$ 37.000</b><small>por edição</small></div></div>
+          <dl>
+            <dt>Estrutura</dt><dd>5 dias · 57 h · cerca de 6 rinoplastias ao vivo · discussão de casos e planejamento · 1 dia de dissecção anatômica</dd>
+            <dt>Vagas</dt><dd>Até 6 alunos · edições em abril e setembro</dd>
+            <dt>Local</dt><dd>Hospital São Francisco (Americana), Instituto Mário Ferraz (Campinas) e São Leopoldo Mandic</dd>
+            <dt>Contrato</dt><dd>Pagamento por edição · refeições incluídas · hotel parceiro · certificado do instituto · PT, EN, ES</dd>
+            <dt>Escada MF</dt><dd>Online R$ 2.500 → Face to Face (auditório) R$ 7.500 → Hands-on em cadáver até R$ 35.000 (turma de 4, 60 h)</dd>
+          </dl>
+          <p class="src"><a href="https://www.marioferraz.com.br/magic-week-abril-2025/" target="_blank" rel="noopener">marioferraz.com.br</a> · <a href="https://www.rhinoanatomy.com.br/" target="_blank" rel="noopener">rhinoanatomy.com.br</a></p>
+        </article>
+
+        <article class="cc">
+          <div class="cc-top"><div><h3>Pós-Graduação em Rinoplastia</h3><div class="who">Dr. Raphael Gomes · reconhecida pelo MEC</div></div><div class="price"><b>Sob inscrição</b><small>valor não publicado</small></div></div>
+          <dl>
+            <dt>Estrutura</dt><dd>6 módulos práticos · 12 cirurgias feitas pelo aluno · 230 h de prática em centro cirúrgico · 360 h no total · técnicas estruturada e de preservação</dd>
+            <dt>Formato</dt><dd>Presencial com mentoria + plataforma com cirurgias narradas</dd>
+            <dt>Contrato</dt><dd>Pós lato sensu com certificado reconhecido pelo MEC · inscrição pelo site</dd>
+          </dl>
+          <p class="src"><a href="https://www.drraphaelgomes.com.br/lp/pos-rinoplastia" target="_blank" rel="noopener">drraphaelgomes.com.br</a></p>
+        </article>
+
+        <article class="cc">
+          <div class="cc-top"><div><h3>Fellowship presencial · Rhinoface</h3><div class="who">Família Patrocínio</div></div><div class="price"><b>Incluído</b><small>no plano de R$ 6.990</small></div></div>
+          <dl>
+            <dt>Estrutura</dt><dd>1 mês de imersão em centro cirúrgico, com casos de alta complexidade e discussão intraoperatória</dd>
+            <dt>Contrato</dt><dd>Vem junto com o RHINO Fellowship online e com o combo RHINO + FACE</dd>
+            <dt>Nota</dt><dd>O único que embute o presencial no preço do online</dd>
+          </dl>
+          <p class="src"><a href="https://www.rhinofaceacademy.com/" target="_blank" rel="noopener">rhinofaceacademy.com</a></p>
+        </article>
+
+        <article class="cc">
+          <div class="cc-top"><div><h3>HRET · Perface</h3><div class="who">Dr. Fernando Nakamura · Miami (EUA)</div></div><div class="price"><b>US$ 6.900 – 8.000</b><small>≈ R$ 36 – 41 mil</small></div></div>
+          <dl>
+            <dt>Estrutura</dt><dd>3 dias: 2 de aulas e discussão, 1 de dissecção em cadáver (primária e secundária) · 15+ professores de 7 países</dd>
+            <dt>Contrato</dt><dd>Entrada por aplicação · vagas limitadas · edição anual</dd>
+            <dt>Nota</dt><dd>Degrau acima da Rhino Masterclass online de R$ 1.080</dd>
+          </dl>
+          <p class="src"><a href="https://perfaceacademy.com/en/hret-2025/" target="_blank" rel="noopener">perfaceacademy.com</a></p>
+        </article>
+
+        <article class="cc">
+          <div class="cc-top"><div><h3>ORL+</h3><div class="who">Santa Casa de São Paulo</div></div><div class="price"><b>Sob inscrição</b><small>pré-inscrição e lista de espera</small></div></div>
+          <dl>
+            <dt>Estrutura</dt><dd>Esteira em 4 etapas: ORL+ Play (online) → 3D Surgical Lab (simuladores feitos de tomografias reais) → Imersão em peça anatômica → Hands-on em centro cirúrgico</dd>
+            <dt>Rinoplastia</dt><dd>Módulo RINO anunciado como “em breve”</dd>
+            <dt>Contrato</dt><dd>Não divulgado</dd>
+          </dl>
+          <p class="src"><a href="https://www.orlmais.com/" target="_blank" rel="noopener">orlmais.com</a></p>
+        </article>
+
+        <article class="cc">
+          <div class="cc-top"><div><h3>Aperfeiçoamento em Rinoplastia · HCX FMUSP</h3><div class="who">Hospital das Clínicas · FMUSP</div></div><div class="price"><b>≈ R$ 16.000</b><small>curso institucional</small></div></div>
+          <dl>
+            <dt>Estrutura</dt><dd>Presencial, com aprendizado baseado em problemas e atividades em ambulatório, focado em deformidades secundárias</dd>
+            <dt>Contrato</dt><dd>Matrícula institucional com certificado de aperfeiçoamento</dd>
+          </dl>
+          <p class="src"><a href="https://ensino.hcxfmusp.org.br/online/copia-de-aperfeicoamento-em-rinoplastia-estetica-e-funcional/p" target="_blank" rel="noopener">hcxfmusp.org.br</a></p>
+        </article>
+
+        <article class="cc">
+          <div class="cc-top"><div><h3>Fellowship de Rinoplastia · Hospital Paulista</h3><div class="who">Hospital Paulista de Otorrinolaringologia</div></div><div class="price"><b>Por edital</b><small>valor não publicado</small></div></div>
+          <dl>
+            <dt>Estrutura</dt><dd>1 ano de fellowship dentro do hospital</dd>
+            <dt>Vagas</dt><dd>2 por ano · inscrições de fevereiro a abril</dd>
+            <dt>Contrato</dt><dd>Seleção por edital, no modelo de pós-residência</dd>
+          </dl>
+          <p class="src"><a href="https://www.hospitalpaulista.com.br/fellowship-de-rinoplastia/" target="_blank" rel="noopener">hospitalpaulista.com.br</a></p>
+        </article>
+
+        <article class="cc">
+          <div class="cc-top"><div><h3>Advanced Face Contour</h3><div class="who">Dr. Lessandro Martins</div></div><div class="price"><b>Sob consulta</b><small>valor não publicado</small></div></div>
+          <dl>
+            <dt>Estrutura</dt><dd>Evento com dezenas de cirurgias em pacientes reais transmitidas em 4K com zoom de até 30x · módulo opcional de cadáver · deep plane e rinoplastia (técnica FishBone)</dd>
+            <dt>Contrato</dt><dd>Inscrição por evento, com fellowship à parte</dd>
+          </dl>
+          <p class="src"><a href="https://adfacecontour.com.br/" target="_blank" rel="noopener">adfacecontour.com.br</a></p>
+        </article>
+
+      </div>
+
+      <h3 style="margin-top:48px">Formação presencial lado a lado</h3>
+      <div class="tbl" style="margin-top:12px">
+        <table>
+          <thead><tr><th>Programa</th><th>Quem</th><th>Duração</th><th>Cirurgias</th><th>Cadáver / simulador</th><th>Vagas</th><th>Preço</th><th>Contrato</th></tr></thead>
+          <tbody>
+            <tr><td><b>Magic Week</b></td><td>Mário Ferraz</td><td>5 dias · 57 h</td><td class="y">~6 ao vivo</td><td class="y">1 dia de cadáver</td><td class="num">6</td><td class="num">R$ 37.000</td><td>Por edição</td></tr>
+            <tr><td><b>MF Hands-on</b></td><td>Mário Ferraz</td><td>60 h</td><td class="y">Ao vivo</td><td class="y">Cadáver fresco</td><td class="num">4</td><td class="num">até R$ 35.000</td><td>Por turma</td></tr>
+            <tr><td><b>MF Face to Face</b></td><td>Mário Ferraz</td><td>Evento</td><td class="p">Em auditório</td><td class="n">Não</td><td class="num">n/d</td><td class="num">R$ 7.500</td><td>Por edição</td></tr>
+            <tr><td><b>Pós em Rinoplastia</b></td><td>Raphael Gomes</td><td>360 h</td><td class="y">12 feitas pelo aluno</td><td class="n">n/d</td><td class="num">n/d</td><td class="num">n/d</td><td>Pós lato sensu (MEC)</td></tr>
+            <tr><td><b>Fellowship Rhinoface</b></td><td>Patrocínio</td><td>1 mês</td><td class="y">Acompanha</td><td class="n">Não</td><td class="num">n/d</td><td class="num">Incluído</td><td>Junto ao online</td></tr>
+            <tr><td><b>HRET</b></td><td>Nakamura</td><td>3 dias</td><td class="n">Não</td><td class="y">Cadáver</td><td class="num">Limitadas</td><td class="num">US$ 6.900+</td><td>Por aplicação</td></tr>
+            <tr><td><b>ORL+</b></td><td>Santa Casa SP</td><td>Esteira</td><td class="y">Hands-on</td><td class="y">Ambos</td><td class="num">n/d</td><td class="num">n/d</td><td>Pré-inscrição</td></tr>
+            <tr><td><b>HCX FMUSP</b></td><td>FMUSP</td><td>Curso</td><td class="p">Ambulatório</td><td class="n">Não</td><td class="num">n/d</td><td class="num">≈ R$ 16.000</td><td>Matrícula</td></tr>
+            <tr><td><b>Hospital Paulista</b></td><td>Hospital</td><td>1 ano</td><td class="y">Rotina</td><td class="n">n/d</td><td class="num">2</td><td class="num">n/d</td><td>Edital</td></tr>
+            <tr><td><b>Advanced Face Contour</b></td><td>Lessandro Martins</td><td>Evento</td><td class="y">Dezenas, em 4K</td><td class="p">Opcional</td><td class="num">n/d</td><td class="num">n/d</td><td>Por evento</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="band light" id="m-outras">
+    <div class="wrap">
+      <p class="eyebrow">Outras especialidades</p>
+      <h2>Quatro modelos de fora da rinoplastia</h2>
+      <p class="lead">Cada um resolve de um jeito a mistura entre conteúdo online, prática e recorrência.</p>
+      <div class="ogrid">
+        <article class="oc">
+          <div><h3>Cetrus</h3><div class="who">Ultrassonografia · 30 anos · São Paulo e Recife</div></div>
+          <section><h4>Estrutura</h4><ul><li><b>Pós lato sensu em US Geral</b>: até 24 meses, 834 h, 26 módulos presenciais + 10 cursos EaD na plataforma iCetrus</li><li><b>Cursos intensivos</b>: ex. Ginecologia e Obstetrícia, 8 dias e 80 h, com turmas datadas até 2027</li><li><b>Monitoria</b>: 2 anos, 4.700 h, 1.500+ exames, no modelo de residência</li></ul></section>
+          <section><h4>Preço</h4><ul><li>Não publicado; orçamento por WhatsApp</li><li>Monitoria: bolsa de 90% para selecionados</li></ul></section>
+          <section><h4>Contrato</h4><ul><li>Vendido por turma, com data de início e vagas</li><li>Pós com certificado lato sensu</li><li>Monitoria com prova e entrevista</li></ul></section>
+          <p class="lesson"><b>Para a RM:</b> teoria online antes, encontro presencial só para prática. O acervo faria o papel do iCetrus.</p>
+        </article>
+        <article class="oc">
+          <div><h3>Curso LipoHD</h3><div class="who">Dr. Eduardo Raulino · plástica corporal</div></div>
+          <section><h4>Estrutura</h4><ul><li>8 módulos: teórico, cirúrgico (cirurgias narradas), lipoabdominoplastia HD, miniabdominoplastia HD, lipoenxertia glútea, complicações, Renuvion e bônus de marketing</li><li>Versões em português, inglês e espanhol</li></ul></section>
+          <section><h4>Preço</h4><ul><li>R$ 8.970 (de R$ 12.970)</li><li>Outros cursos do autor vendidos à parte (ex. Biomarcadores)</li></ul></section>
+          <section><h4>Contrato</h4><ul><li>Pagamento único · 12 meses de acesso</li><li>Garantia de 7 dias · Hotmart</li><li>100% online, sem presencial</li></ul></section>
+          <p class="lesson"><b>Para a RM:</b> um procedimento só sustenta ticket de R$ 9 mil online, e a versão em espanhol amplia o mercado sem custo de produção novo.</p>
+        </article>
+        <article class="oc">
+          <div><h3>Total Definer</h3><div class="who">Dr. Alfredo Hoyos · lipo HD · 60+ países</div></div>
+          <section><h4>Estrutura</h4><ul><li><b>Online</b>: Master Class com vídeos, fóruns e casos</li><li><b>Presencial</b>: Observation Course e Full Immersion (cirurgias ao vivo, cadáver, mentoria 1:1)</li><li><b>Certificação</b> em níveis: TD Master, Grand Master e instrutor</li></ul></section>
+          <section><h4>Preço</h4><ul><li>Assinatura online: US$ 199 (residentes), 299 (básico), 559 (Masters), 799 (plásticos)</li><li>Imersão presencial: sob aplicação</li></ul></section>
+          <section><h4>Contrato</h4><ul><li>Assinatura com descontos em congressos, app e instrumental</li><li>Imersão só para cirurgiões plásticos certificados, com seleção</li></ul></section>
+          <p class="lesson"><b>Para a RM:</b> planos por perfil (residente × cirurgião) e benefícios de comunidade mantêm o aluno pagando depois do curso.</p>
+        </article>
+        <article class="oc">
+          <div><h3>DeuLaudo</h3><div class="who">Radiologia · Daniel Cardoso (CEO) e Lucas Miranda · founder da comunidade MBS</div></div>
+          <section><h4>Estrutura</h4><ul><li><b>RadioClub</b>: comunidade para radiologistas e residentes, 350+ aulas por subespecialidade, flashcards, discussão de casos ao vivo a cada 15 dias e grupo de WhatsApp (500+ membros)</li><li><b>PréCBR e PréR4</b>: preparatórios para prova de título e R4</li><li><b>USClub</b>: formação em ultrassonografia</li><li><b>DeuLaudo Diagnósticos</b>: desafios gratuitos, porta de entrada</li><li>App iOS/Android · 2.000+ alunos · 3.000+ questões</li></ul></section>
+          <section><h4>Preço</h4><ul><li>Média de R$ 4 mil por ano por curso</li><li>Valores não publicados no site</li></ul></section>
+          <section><h4>Contrato</h4><ul><li>Assinatura anual (365 dias) com renovação</li><li>Garantia de 7 dias</li><li>Acesso restrito a radiologistas e residentes</li></ul></section>
+          <p class="lesson"><b>Para a RM:</b> casos ao vivo a cada 15 dias e comunidade sustentam a renovação anual. O modelo mais próximo do que a RM já faz, e o founder é da rede MBS.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band dark" id="m-leitura">
+    <div class="wrap">
+      <p class="eyebrow">Leitura para a Rhinoplasty Minds</p>
+      <h2>O que o diagnóstico de mercado indica</h2>
+      <div class="takeaways">
+        <div class="tk"><div class="n">1</div><div><h3>Espaço para a escola de vários mestres</h3><p>Só o Perface trabalha com convidados, e cobra R$ 1,1 mil. Os demais vendem o método de um autor. A RM já nasceu com esse formato.</p></div></div>
+        <div class="tk"><div class="n">2</div><div><h3>Online como base, presencial como degrau</h3><p>No online, o mercado aceita R$ 4,5 a 9,5 mil por curso autoral. O presencial com cirurgia vai de R$ 7,5 a 37 mil. Os líderes vendem os dois em escada; a RM pode começar pelo online e somar o presencial por parceria.</p></div></div>
+        <div class="tk"><div class="n">3</div><div><h3>Renovação é o ponto fraco de todos</h3><p>Quase todos vendem 12 meses e param aí. O Sella renova com 50% de desconto; Total Definer e DeuLaudo mostram assinatura por perfil e assinatura anual sustentada por casos ao vivo.</p></div></div>
+        <div class="tk"><div class="n">4</div><div><h3>Webinar gratuito já é a captação</h3><p>Maicon Paiva e Sella usam aula grátis para vender. A RM tem isso todo mês há três anos.</p></div></div>
+      </div>
+      <details class="src" style="color:var(--gray-d)">
+        <summary>Fontes</summary>
+        <ul>
+          <li><a style="color:var(--sky)" href="https://www.isaps.org/media/razfvmsk/isaps-global-survey-2024.pdf" target="_blank" rel="noopener">ISAPS Global Survey 2024</a></li>
+          <li><a style="color:var(--sky)" href="https://med.estrategia.com/portal/residencia-medica/especialidades/otorrinolaringologia/" target="_blank" rel="noopener">Estratégia MED · Otorrino (Demografia Médica 2025)</a></li>
+          <li><a style="color:var(--sky)" href="https://med.estrategia.com/portal/residencia-medica/especialidades/cirurgia-plastica/" target="_blank" rel="noopener">Estratégia MED · Cirurgia Plástica</a></li>
+          <li><a style="color:var(--sky)" href="https://www.medway.com.br/conteudos/sociedade-brasileira-de-cirurgia-plastica-sbcp/" target="_blank" rel="noopener">Medway · SBCP</a></li>
+          <li><a style="color:var(--sky)" href="https://cetrus.com.br/cursos/pos-graduacao-lato-sensu-us-geral/" target="_blank" rel="noopener">Cetrus · Pós em US Geral</a></li>
+          <li><a style="color:var(--sky)" href="https://cetrus.com.br/cursos/programa-de-formacao-em-us-geral/" target="_blank" rel="noopener">Cetrus · Monitoria</a></li>
+          <li><a style="color:var(--sky)" href="https://sanarmed.com/o-que-e-o-programa-de-especializacao-em-ultrassonografia-do-cetrus/" target="_blank" rel="noopener">Sanarmed · Programa Cetrus</a></li>
+          <li><a style="color:var(--sky)" href="https://www.lipohd.com.br/pt" target="_blank" rel="noopener">Curso LipoHD</a></li>
+          <li><a style="color:var(--sky)" href="https://totaldefinermasterclass.com/en/planes/" target="_blank" rel="noopener">Total Definer Master Class · planos</a></li>
+          <li><a style="color:var(--sky)" href="https://deulaudo.com/#produtos" target="_blank" rel="noopener">DeuLaudo · produtos</a></li>
+          <li><a style="color:var(--sky)" href="https://www.deulaudo.com/radioclub" target="_blank" rel="noopener">DeuLaudo · RadioClub</a></li>
+          <li><a style="color:var(--sky)" href="https://totaldefiner.com/" target="_blank" rel="noopener">Total Definer</a></li>
+          <li>Levantamento de concorrentes da consultoria (Bench Rino/Face), set/2026</li>
+        </ul>
+      </details>
+      <div class="next" style="margin-top:36px"><a style="color:var(--sky)" href="#hoje">← O que temos hoje</a><a style="color:var(--sky)" href="#inicio">Voltar aos entregáveis →</a></div>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer><div class="wrap"><span>Rhinoplasty Minds | Consultoria · Adriana Gialluisi</span><span>Setembro de 2026</span></div></footer>
+
+<script>
+(function(){
+  var views=[].slice.call(document.querySelectorAll(".view"));
+  var navs=[].slice.call(document.querySelectorAll(".top nav a"));
+  var anchorMap={"m-publico":"mercado","m-cenario":"mercado","m-concorrentes":"mercado","m-tabela":"mercado","m-presencial":"mercado","m-outras":"mercado","m-leitura":"mercado"};
+  function route(){
+    var h=(location.hash||"#inicio").slice(1);
+    var v=anchorMap[h]||h;
+    if(!document.querySelector('.view[data-view="'+v+'"]'))v="inicio";
+    views.forEach(function(el){el.hidden=el.dataset.view!==v});
+    navs.forEach(function(a){a.classList.toggle("on",a.dataset.v===v)});
+    if(anchorMap[h]){var t=document.getElementById(h);if(t){t.scrollIntoView();window.scrollBy(0,-56)}}
+    else window.scrollTo(0,0);
+    if(v==="mercado")draw();
+  }
+  window.addEventListener("hashchange",route);
+
+  var drawn=false;
+  function draw(){
+    if(drawn)return;drawn=true;
+    var data=[
+      {n:"Rhino Masterclass (Perface)",v:1080,l:"R$ 1.080",ref:1},
+      {n:"Formação Avançada (Bittar)",v:4500,l:"R$ 4.500"},
+      {n:"Facelift (Raphael Gomes)",v:5100,l:"R$ 5.100"},
+      {n:"Rhinoface Academy",v:6990,l:"R$ 6.990"},
+      {n:"RhinoTips Academy",v:8100,l:"R$ 8.100"},
+      {n:"Mastering Preservation (Sella)",v:8900,l:"R$ 8.900"},
+      {n:"Método R.F.E. (Maicon Paiva)",v:9459,l:"R$ 9.459"}
+    ];
+    var svg=document.getElementById("bars"),NS="http://www.w3.org/2000/svg";
+    var W=1000,left=230,right=90,rowH=36,top=26,H=top+data.length*rowH+30,max=10000;
+    svg.setAttribute("viewBox","0 0 "+W+" "+H);
+    var x=function(v){return left+v/max*(W-left-right)};
+    function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;svg.appendChild(e);return e}
+    [0,2500,5000,7500,10000].forEach(function(t){
+      el("line",{x1:x(t),x2:x(t),y1:top,y2:top+data.length*rowH,stroke:"#E3E7EB","stroke-width":1});
+      el("text",{x:x(t),y:top+data.length*rowH+20,"text-anchor":"middle","font-size":12,fill:"#6B7280"},t===0?"0":"R$ "+(t/1000).toLocaleString("pt-BR")+" mil");
+    });
+    var avg=6304;
+    el("line",{x1:x(avg),x2:x(avg),y1:top,y2:top+data.length*rowH,stroke:"#14181D","stroke-width":1.5,"stroke-dasharray":"4 4"});
+    var tip=document.getElementById("tip"),box=document.getElementById("chartbox");
+    data.forEach(function(d,i){
+      var y=top+i*rowH;
+      el("text",{x:left-12,y:y+rowH/2+4,"text-anchor":"end","font-size":13.5,fill:"#14181D","font-weight":d.ref?700:400},d.n);
+      el("rect",{x:left,y:y+9,width:x(d.v)-left,height:rowH-18,rx:4,fill:d.ref?"#4FA8E0":"#1E6FA3"});
+      el("text",{x:x(d.v)+8,y:y+rowH/2+4,"font-size":13,fill:"#14181D","font-weight":600},d.l);
+      var hit=el("rect",{x:0,y:y,width:W,height:rowH,fill:"transparent",tabindex:0});
+      function show(ev){
+        var diff=Math.round((d.v-avg)/avg*100);
+        tip.innerHTML="<b>"+d.n+"</b><br>"+d.l+" à vista · "+(diff>0?"+":"")+diff+"% vs. média";
+        var r=box.getBoundingClientRect(),br=hit.getBoundingClientRect();
+        var px=ev&&ev.clientX?ev.clientX-r.left+14:br.left-r.left+left;
+        tip.style.left=Math.max(0,Math.min(px,r.width-240))+"px";tip.style.top=(br.bottom-r.top+4)+"px";tip.classList.add("show");
+      }
+      hit.addEventListener("mousemove",show);hit.addEventListener("focus",show);
+      hit.addEventListener("mouseleave",function(){tip.classList.remove("show")});
+      hit.addEventListener("blur",function(){tip.classList.remove("show")});
+    });
+    el("text",{x:x(avg)+6,y:top-10,"font-size":11.5,fill:"#14181D","font-weight":700},"média R$ 6,3 mil");
+  }
+  route();
+})();
+</script>
+
+</body>
+</html>
