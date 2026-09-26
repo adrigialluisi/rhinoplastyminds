@@ -15,6 +15,7 @@
   --sans:"Inter",system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
 }
 *{box-sizing:border-box}
+html,body{margin:0;padding:0}
 body{background:var(--white);color:var(--ink);font-family:var(--sans);font-size:15.5px;line-height:1.55;-webkit-font-smoothing:antialiased}
 a{color:var(--blue)}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--sky);outline-offset:2px;border-radius:4px}
@@ -33,7 +34,7 @@ h3{font-size:18px;letter-spacing:-.2px;font-weight:700;margin:0 0 6px;text-wrap:
 .dark .lead{color:var(--gray-d)}
 
 /* top bar */
-.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:rgba(13,15,18,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid #1d2229}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:#0D0F12;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid #1d2229}
 .top .wrap{display:flex;align-items:center;gap:20px;height:56px}
 .brand{display:flex;align-items:center;gap:9px;color:#fff;font-weight:700;font-size:14px;white-space:nowrap;text-decoration:none}
 .brand img{height:26px;width:auto;display:block}
@@ -77,6 +78,8 @@ h3{font-size:18px;letter-spacing:-.2px;font-weight:700;margin:0 0 6px;text-wrap:
 .it p{color:var(--gray);font-size:15px}
 .dark .it p{color:var(--gray-d)}
 @media (max-width:760px){.ilist{grid-template-columns:1fr}}
+.ilist.three{grid-template-columns:repeat(3,1fr);column-gap:40px}
+@media (max-width:900px){.ilist.three{grid-template-columns:1fr}}
 
 .callout{background:var(--soft);border-radius:6px;padding:18px 26px;margin-top:32px;font-size:16px}
 .callout b{color:var(--blue)}
@@ -188,9 +191,13 @@ tr.ref td{background:#EEF6FC}
 .tk h3{color:#fff}
 @media (max-width:760px){.takeaways{grid-template-columns:1fr}}
 
-.subnav{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}
-.subnav a{font-size:13px;font-weight:600;color:var(--sky);text-decoration:none;border:1px solid var(--navy-line);border-radius:999px;padding:6px 14px}
-.subnav a:hover{background:var(--navy)}
+.subnav-bar{position:sticky;top:calc(env(safe-area-inset-top,0px) + 56px);z-index:25;background:#fff;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.subnav{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-block:12px}
+.subnav::-webkit-scrollbar{display:none}
+.subnav a{flex:none;font-size:13px;font-weight:600;color:var(--blue);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:6px 12px;white-space:nowrap;background:#fff}
+.subnav a:hover{border-color:var(--sky)}
+.subnav a.on{background:var(--navy);border-color:var(--navy);color:#fff}
+#v-mercado section[id^="m-"]{scroll-margin-top:120px}
 .next{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .next a{font-weight:700;text-decoration:none}
 details.src{margin-top:24px;font-size:13px;color:var(--gray)}
@@ -338,19 +345,19 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <div class="kpi"><b>6.700+</b><span>cirurgiões plásticos na SBCP</span><small>SBCP</small></div>
         <div class="kpi"><b>~14,4 mil</b><span>público-alvo somado (ORL + plástica)</span><small>Soma das duas bases</small></div>
       </div>
-      <div class="subnav"><a href="#m-publico">Público</a><a href="#m-cenario">Cenário dos cursos</a><a href="#m-concorrentes">Cursos online</a><a href="#m-tabela">Comparativo online</a><a href="#m-presencial">Formação presencial</a><a href="#m-outras">Outras especialidades</a><a href="#m-leitura">Leitura para a RM</a></div>
     </div>
   </section>
+
+  <div class="subnav-bar"><div class="wrap"><nav class="subnav" aria-label="Seções de mercado"><a href="#m-publico">Público</a><a href="#m-cenario">Cenário dos cursos</a><a href="#m-concorrentes">Cursos online</a><a href="#m-tabela">Comparativo online</a><a href="#m-presencial">Formação presencial</a><a href="#m-outras">Outras especialidades</a><a href="#m-leitura">Leitura para a RM</a></nav></div></div>
 
   <section class="band light" id="m-publico">
     <div class="wrap">
       <p class="eyebrow">Mercado de rinoplastia no Brasil</p>
       <h2>Quem opera nariz e pode comprar o curso</h2>
-      <div class="ilist">
+      <div class="ilist three">
         <div class="it"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 20h18v2H3zM5 10h3v8H5zm5.5-4h3v12h-3zM16 13h3v5h-3z"/></svg><div><h3>1º país em cirurgia estética</h3><p>2,35 milhões de cirurgias estéticas em 2024. A rinoplastia responde por 4,4% delas, com 102.653 procedimentos.</p></div></div>
         <div class="it"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-8 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 2c-2.7 0-8 1.3-8 4v3h16v-3c0-2.7-5.3-4-8-4zm8 0h-1c1.2.9 2 2 2 4v3h7v-3c0-2.7-5.3-4-8-4z"/></svg><div><h3>Duas especialidades fazem rinoplastia</h3><p>7.715 otorrinolaringologistas (idade média 52,7 anos, mais da metade no Sudeste) e 6.700+ cirurgiões plásticos associados à SBCP.</p></div></div>
         <div class="it"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.9V17h2V9zM5 13.2v4L12 21l7-3.8v-4L12 17z"/></svg><div><h3>Renovação constante</h3><p>Só a cirurgia plástica tinha 481 residentes em 2024, 160 no primeiro ano. Todo ano entra uma nova turma de compradores.</p></div></div>
-        <div class="it"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><div><h3>Borda do público</h3><p>Cirurgiões de cabeça e pescoço e crânio-maxilo-faciais, e a América Latina em espanhol, que vários concorrentes já atendem.</p></div></div>
       </div>
       <div class="callout"><b>Leitura:</b> nem todo otorrino ou plástico opera nariz. Se 20 a 30% das duas bases fazem rinoplastia com frequência, o público comprador fica entre 3 e 4 mil cirurgiões.</div>
     </div>
@@ -701,11 +708,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     if(!document.querySelector('.view[data-view="'+v+'"]'))v="inicio";
     views.forEach(function(el){el.hidden=el.dataset.view!==v});
     navs.forEach(function(a){a.classList.toggle("on",a.dataset.v===v)});
-    if(anchorMap[h]){var t=document.getElementById(h);if(t){t.scrollIntoView();window.scrollBy(0,-56)}}
+    if(anchorMap[h]){var t=document.getElementById(h);if(t){t.scrollIntoView()}}
     else window.scrollTo(0,0);
     if(v==="mercado")draw();
   }
   window.addEventListener("hashchange",route);
+  var pills=[].slice.call(document.querySelectorAll(".subnav a"));
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){pills.forEach(function(a){var on=a.getAttribute("href")==="#"+e.target.id;a.classList.toggle("on",on);if(on){var n=a.parentNode,l=a.offsetLeft-n.offsetLeft;if(n.scrollWidth>n.clientWidth&&(l<n.scrollLeft||l+a.offsetWidth>n.scrollLeft+n.clientWidth)){n.scrollLeft=l-16}}})}})},{rootMargin:"-45% 0px -50% 0px"});
+    pills.forEach(function(a){var t=document.getElementById(a.getAttribute("href").slice(1));if(t)io.observe(t)});
+  }
 
   var drawn=false;
   function draw(){
