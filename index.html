@@ -216,6 +216,9 @@ details.src li{break-inside:avoid;margin-bottom:4px}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
 .chips span{font-size:13px;font-weight:600;color:var(--navy);background:#E8F2FB;border-radius:4px;padding:4px 10px}
 @media (max-width:760px){.fmt-h{display:none}.fmt-r{grid-template-columns:1fr;gap:10px}}
+.aff{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+.aff .chips{margin-top:auto;padding-top:14px;border-top:1px solid var(--line)}
+@media (max-width:900px){.aff{grid-template-columns:1fr}}
 .note{font-size:12.5px;color:var(--gray);margin-top:10px;max-width:90ch}
 .legend{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:13px;color:var(--gray);margin-bottom:14px}
 .legend i{font-style:normal;font-weight:700;margin-right:4px}
@@ -729,7 +732,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     </div>
   </section>
 
-  <div class="subnav-bar"><div class="wrap"><nav class="subnav" aria-label="Seções de plataformas"><a href="#f-formatos">Formatos</a><a href="#f-comparativo">Comparativo</a><a href="#f-funcoes">Funcionalidades</a><a href="#f-aovivo">Ao vivo</a><a href="#f-suporte">Suporte</a><a href="#f-leitura">Leitura</a></nav></div></div>
+  <div class="subnav-bar"><div class="wrap"><nav class="subnav" aria-label="Seções de plataformas"><a href="#f-formatos">Formatos</a><a href="#f-comparativo">Comparativo</a><a href="#f-funcoes">Funcionalidades</a><a href="#f-afiliados">Afiliados</a><a href="#f-aovivo">Ao vivo</a><a href="#f-suporte">Suporte</a><a href="#f-leitura">Leitura</a></nav></div></div>
 
   <section class="band light" id="f-formatos">
     <div class="wrap">
@@ -797,6 +800,54 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         </table>
       </div>
       <p class="note">Ao vivo parcial: a plataforma exibe uma live feita no YouTube, Vimeo ou Panda Video. Os itens com “?” precisam ser confirmados em teste ou com o comercial de cada plataforma.</p>
+    </div>
+  </section>
+
+  <section class="band light" id="f-afiliados">
+    <div class="wrap">
+      <p class="eyebrow">Afiliados</p>
+      <h2>Como funciona a venda por afiliados</h2>
+      <p class="lead">Afiliado é quem divulga o curso com um link próprio e ganha uma comissão por cada venda feita por esse link. A plataforma registra de onde veio a venda e divide o pagamento sozinha, sem acerto manual.</p>
+      <div class="flow">
+        <div><b>1 · Cadastro</b><p>O divulgador se afilia ao curso e recebe um link exclusivo</p></div>
+        <div><b>2 · Divulgação</b><p>Ele compartilha o link no Instagram, WhatsApp, aulas ou e-mail</p></div>
+        <div><b>3 · Venda</b><p>O aluno compra pelo link e a plataforma identifica o afiliado</p></div>
+        <div><b>4 · Divisão</b><p>A comissão vai para o afiliado e o restante para o produtor</p></div>
+      </div>
+      <div class="aff">
+        <div class="model-col">
+          <div class="mk">Vitrine aberta</div>
+          <h3>Qualquer afiliado pode pedir para divulgar</h3>
+          <ul><li>O curso fica listado num catálogo público da plataforma</li><li>Afiliados que já vendem outros produtos encontram o curso e pedem para entrar</li><li>O produtor define a comissão e pode aprovar cada pedido</li></ul>
+          <div class="chips"><span>Hotmart</span><span>Eduzz</span><span>Monetizze</span></div>
+        </div>
+        <div class="model-col">
+          <div class="mk">Rede fechada</div>
+          <h3>Só divulga quem o produtor convidar</h3>
+          <ul><li>Não existe catálogo público, ou ele é restrito a convidados</li><li>O produtor monta a própria rede: parceiros, ex-alunos, convidados</li><li>Mais controle sobre quem fala em nome do curso</li></ul>
+          <div class="chips"><span>Kiwify</span><span>Ticto</span><span>Greenn</span><span>Kajabi</span></div>
+        </div>
+        <div class="model-col">
+          <div class="mk">Sem programa</div>
+          <h3>A plataforma não faz a divisão</h3>
+          <ul><li>A Memberkit não vende, então o programa de afiliados fica no checkout conectado a ela</li><li>Em HeroSpark, Teachable e Skool o recurso não foi confirmado nas fontes</li></ul>
+          <div class="chips"><span>Memberkit</span></div>
+        </div>
+      </div>
+      <h3 style="margin-top:40px">A taxa da plataforma muda quando a venda vem de afiliado</h3>
+      <div class="tbl" style="margin-top:12px">
+        <table class="sup">
+          <thead><tr><th>Plataforma</th><th>Venda direta</th><th>Venda por afiliado</th></tr></thead>
+          <tbody>
+            <tr><td><b>Hotmart</b></td><td class="num">9,9% + R$ 2,49</td><td class="num">9,9% + R$ 2,49 (igual)</td></tr>
+            <tr><td><b>Eduzz</b></td><td class="num">4,9% + R$ 2,49</td><td class="num">8,9% + R$ 2,49</td></tr>
+            <tr><td><b>Monetizze</b></td><td class="num">7,9% + R$ 1,50</td><td class="num">9,9% + R$ 1,50</td></tr>
+            <tr><td><b>Greenn</b></td><td class="num">4,99% a 3,49% + R$ 1,00</td><td class="num">8,99% + R$ 1,00</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">A taxa da plataforma é descontada antes da comissão do afiliado, que é definida pelo produtor.</p>
+      <div class="callout"><b>Para a RM:</b> o programa de afiliados pode pagar comissão aos convidados dos webinars, a cirurgiões parceiros e a perfis médicos que indicarem o curso. Para um público restrito a médicos, a rede fechada dá mais controle sobre quem divulga.</div>
     </div>
   </section>
 
@@ -900,7 +951,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 (function(){
   var views=[].slice.call(document.querySelectorAll(".view"));
   var navs=[].slice.call(document.querySelectorAll(".top nav a"));
-  var anchorMap={"m-publico":"mercado","m-cenario":"mercado","m-concorrentes":"mercado","m-tabela":"mercado","m-presencial":"mercado","m-outras":"mercado","m-leitura":"mercado","f-formatos":"ferramentas","f-comparativo":"ferramentas","f-funcoes":"ferramentas","f-aovivo":"ferramentas","f-suporte":"ferramentas","f-leitura":"ferramentas"};
+  var anchorMap={"m-publico":"mercado","m-cenario":"mercado","m-concorrentes":"mercado","m-tabela":"mercado","m-presencial":"mercado","m-outras":"mercado","m-leitura":"mercado","f-formatos":"ferramentas","f-comparativo":"ferramentas","f-funcoes":"ferramentas","f-afiliados":"ferramentas","f-aovivo":"ferramentas","f-suporte":"ferramentas","f-leitura":"ferramentas"};
   function route(){
     var h=(location.hash||"#inicio").slice(1);
     var v=anchorMap[h]||h;
