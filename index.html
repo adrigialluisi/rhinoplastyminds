@@ -223,6 +223,7 @@ details.src li{break-inside:avoid;margin-bottom:4px}
 .legend{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:13px;color:var(--gray);margin-bottom:14px}
 .legend i{font-style:normal;font-weight:700;margin-right:4px}
 .u{color:#8A94A3;font-weight:700}
+a.site{color:var(--ink);text-decoration:none;white-space:nowrap}a.site:hover b{color:var(--blue);text-decoration:underline}
 table.feat td:not(:first-child),table.feat th:not(:first-child){text-align:center}
 table.feat td{font-size:16px}
 table.feat td:first-child{font-size:14px;white-space:nowrap}
@@ -232,6 +233,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 </style>
 </head>
 <body>
+
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#inicio"><img src="logo-rhinoplasty-minds.png" alt="Rhinoplasty Minds"></a>
@@ -722,9 +724,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <div class="wrap">
       <p class="eyebrow">Fase 1 · Diagnóstico · 03</p>
       <h2>Plataformas para hospedar e vender o curso</h2>
-      <p class="lead">Onze ferramentas prontas, comparadas pelo que importa para montar o curso: formato, preço, se hospeda os vídeos, como o aluno paga, transmissão ao vivo e atendimento.</p>
+      <p class="lead">Onde hospedar, vender e transmitir o curso da RM.</p>
       <div class="kpis">
-        <div class="kpi"><b>11</b><span>plataformas analisadas</span><small>Lista do estudo da equipe</small></div>
+        <div class="kpi"><b>11</b><span>plataformas analisadas</span><small>Brasileiras e internacionais</small></div>
         <div class="kpi"><b>10 de 11</b><span>hospedam os vídeos</span><small>Só a Memberkit precisa de serviço à parte</small></div>
         <div class="kpi"><b>7</b><span>cobram o aluno com Pix e cartão em 12x</span><small>Todas brasileiras</small></div>
         <div class="kpi"><b>2</b><span>têm live própria que pode ser aberta</span><small>Skool e Hotmart</small></div>
@@ -732,13 +734,48 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     </div>
   </section>
 
-  <div class="subnav-bar"><div class="wrap"><nav class="subnav" aria-label="Seções de plataformas"><a href="#f-formatos">Formatos</a><a href="#f-comparativo">Comparativo</a><a href="#f-funcoes">Funcionalidades</a><a href="#f-afiliados">Afiliados</a><a href="#f-aovivo">Ao vivo</a><a href="#f-suporte">Suporte</a><a href="#f-leitura">Leitura</a></nav></div></div>
+  <div class="subnav-bar"><div class="wrap"><nav class="subnav" aria-label="Seções de plataformas"><a href="#f-requisitos">Requisitos RM</a><a href="#f-formatos">Formatos</a><a href="#f-comparativo">Comparativo</a><a href="#f-funcoes">Funcionalidades</a><a href="#f-afiliados">Afiliados</a><a href="#f-aovivo">Ao vivo</a><a href="#f-suporte">Suporte</a><a href="#f-leitura">Leitura</a></nav></div></div>
+
+  <section class="band light" id="f-requisitos">
+    <div class="wrap">
+      <p class="eyebrow">Requisitos da RM</p>
+      <h2>O cenário ideal e quem chega mais perto</h2>
+      <div class="chips" style="margin-bottom:28px"><span>Acesso fechado com validação de CRM</span><span>Hospedagem de vídeos</span><span>Lives ou integração com YouTube/Zoom</span><span>Comunidade com mensagens</span><span>E-mail marketing automático</span></div>
+      <div class="tbl">
+        <table class="sup">
+          <thead><tr><th>Plataforma</th><th>Acesso + CRM</th><th>Vídeo</th><th>Live</th><th>Comunidade</th><th>E-mail automático</th><th>Custo · pagamento</th></tr></thead>
+          <tbody>
+            <tr class="ref"><td><a class="site" href="https://hotmart.com/pt-br" target="_blank" rel="noopener"><b>Hotmart</b> ↗</a></td><td class="y">✓ turma de validação</td><td class="y">✓</td><td class="y">✓ nativa (beta)</td><td class="y">✓</td><td class="y">✓ Hotmart Send</td><td>% por venda · Pix, boleto, 12x</td></tr>
+            <tr><td><a class="site" href="https://kajabi.com" target="_blank" rel="noopener"><b>Kajabi</b> ↗</a></td><td class="p">◐ manual</td><td class="y">✓</td><td class="p">◐ YouTube/Zoom</td><td class="y">✓</td><td class="y">✓</td><td>US$ 143+/mês · só cartão</td></tr>
+            <tr><td><a class="site" href="https://www.skool.com" target="_blank" rel="noopener"><b>Skool</b> ↗</a></td><td class="y">✓ aprovação na entrada</td><td class="y">✓</td><td class="y">✓ nativa, grátis</td><td class="y">✓</td><td class="n">—</td><td>US$ 99/mês · só cartão</td></tr>
+                      <tr><td><a class="site" href="https://herospark.com" target="_blank" rel="noopener"><b>HeroSpark</b> ↗</a></td><td class="p">◐ manual</td><td class="y">✓</td><td class="u">? a confirmar</td><td class="u">? a confirmar</td><td class="y">✓</td><td>% por venda ou R$ 197–497/mês · Pix, 12x</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">As demais atendem 2 ou 3 itens: curso e vídeo, live só incorporada e e-mail apenas transacional. Hubla avaliada e descartada: mesmo padrão da Kiwify, sem live.</p>
+      <h3 style="margin-top:40px">Validação de CRM na Hotmart</h3>
+      <div class="flow">
+        <div><b>1 · Compra</b><p>Aluno entra na turma “Aguardando validação”, que só mostra as boas-vindas e o formulário de CRM + UF</p></div>
+        <div><b>2 · Conferência</b><p>Equipe confere o CRM no portal do CFM</p></div>
+        <div><b>3 · Aprovado</b><p>Aluno é movido para a turma com o curso completo</p></div>
+        <div><b>4 · Não é médico</b><p>Bloqueio manual do acesso e reembolso</p></div>
+      </div>
+            <h3 style="margin-top:40px">Complementos de baixo custo</h3>
+      <div class="kpis" style="margin-top:12px">
+        <div class="kpi"><b style="font-size:20px">CRM</b><span>Formulário Tally (grátis) + conferência no portal do CFM</span><small>Automação: serviço pago de consulta do CFM</small></div>
+        <div class="kpi"><b style="font-size:20px">Live</b><span>YouTube Live não listado (grátis) + StreamYard</span><small>Substitui o Zoom pago</small></div>
+        <div class="kpi"><b style="font-size:20px">E-mail</b><span>MailerLite (grátis até 500 contatos) ou Brevo (300 e-mails/dia)</span><small>Para plataformas sem e-mail próprio</small></div>
+        <div class="kpi"><b style="font-size:20px">Grupo</b><span>Comunidades do WhatsApp (grátis)</span><small>Link enviado após validar o CRM</small></div>
+      </div>
+      <div class="callout"><b>Para a RM:</b> a Hotmart atende os cinco requisitos sem mensalidade. Antes de decidir, testar o limite da live beta. A validação começa manual e pode ser automatizada depois com o serviço pago de consulta do CFM.</div>
+    </div>
+  </section>
 
   <section class="band light" id="f-formatos">
     <div class="wrap">
       <p class="eyebrow">Formatos</p>
       <h2>Cinco jeitos de montar um curso online</h2>
-      <p class="lead">O formato define quem cobra o aluno e como a plataforma é paga: um percentual de cada venda ou uma mensalidade fixa.</p>
+      <p class="lead">Percentual por venda ou mensalidade fixa.</p>
       <div class="fmt">
         <div class="fmt-h"><span>Formato</span><span>Plataformas</span><span>Como a plataforma cobra</span></div>
         <div class="fmt-r"><div><h3>Checkout + área de membros</h3><p>Vende, recebe e entrega o curso no mesmo lugar</p></div><div class="chips"><span>Hotmart</span><span>Kiwify</span><span>Eduzz</span><span>Monetizze</span><span>Ticto</span><span>Greenn</span></div><p>Percentual + tarifa fixa por venda aprovada, sem mensalidade</p></div>
@@ -758,17 +795,17 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <table>
           <thead><tr><th>Plataforma</th><th>Formato</th><th>Preço</th><th>Hospeda vídeo</th><th>Pagamento do aluno</th><th>Ao vivo</th><th>Suporte</th></tr></thead>
           <tbody>
-            <tr><td><b>Hotmart</b></td><td>Checkout + área de membros + comunidade</td><td>9,9% + R$ 2,49 por venda<br><small>até 8,9% acima de R$ 100 mil/ano</small></td><td class="y">Sim</td><td>Pix, boleto, cartão 12x · 22 moedas</td><td class="y">Nativa (beta) · comunidade pode ser aberta</td><td class="num">RA 8,4</td></tr>
-            <tr><td><b>Kiwify</b></td><td>Checkout + área de membros</td><td>8,99% + R$ 2,49</td><td class="y">Sim, sem custo</td><td>Pix, boleto, cartão 12x</td><td class="p">YouTube incorporado</td><td class="num">RA 8,0</td></tr>
-            <tr><td><b>Eduzz</b></td><td>Checkout + área de membros (Nutror)</td><td>4,9% + R$ 2,49<br><small>8,9% via afiliado · sem % até R$ 30</small></td><td class="y">Sim</td><td>Pix, boleto, cartão · internacional</td><td class="p">YouTube incorporado</td><td class="num">RA 8,2</td></tr>
-            <tr><td><b>Monetizze</b></td><td>Checkout + área de membros</td><td>7,9% + R$ 1,50<br><small>9,9% via afiliado</small></td><td class="y">Sim</td><td>Pix, boleto, cartão</td><td class="n">Não encontrado</td><td class="num">RA 8,7 · RA1000</td></tr>
-            <tr><td><b>Ticto</b></td><td>Checkout + área de membros (Mozart)</td><td>6,99% + R$ 2,49</td><td class="y">Sim</td><td>Pix (cai no dia), boleto, cartão</td><td class="n">Não encontrado</td><td class="num">RA 9,2 · RA1000</td></tr>
-            <tr><td><b>HeroSpark</b></td><td>Tudo-em-um brasileiro</td><td>3,9% + R$ 1,00<br><small>ou planos de R$ 197 a 497/mês</small></td><td class="y">Sim</td><td>Pix, boleto, cartão 12x</td><td class="p">Anuncia encontros ao vivo, sem detalhe</td><td class="num">RA 8,6</td></tr>
-            <tr><td><b>Greenn</b></td><td>Checkout + área de membros + assistente de IA</td><td>4,99% a 3,49% + R$ 1,00</td><td class="p">Sim · 3 GB grátis, 80 MB por arquivo</td><td>Pix (cai no dia), boleto, cartão · multimoeda</td><td class="n">Não encontrado</td><td class="num">RA 9,0 · RA1000</td></tr>
-            <tr><td><b>Kajabi</b></td><td>Plataforma internacional</td><td>US$ 143 / 199 / 399 por mês<br><small>plano anual · + taxa do cartão</small></td><td class="y">Sim</td><td>Só cartão · sem Pix</td><td class="p">Inscrição aberta · transmite por YouTube ou Zoom</td><td class="num">Trustpilot 3,4/5</td></tr>
-            <tr><td><b>Teachable</b></td><td>Plataforma internacional</td><td>US$ 29 + 7,5% · US$ 69 · US$ 139 por mês<br><small>plano anual</small></td><td class="y">Sim</td><td>Só cartão · sem Pix</td><td class="n">Não tem</td><td class="num">Trustpilot 3,3/5</td></tr>
-            <tr><td><b>Skool</b></td><td>Comunidade com cursos</td><td>US$ 9 + 10% por venda<br><small>ou US$ 99 por mês</small></td><td class="y">Sim, ilimitado</td><td>Só cartão · sem Pix</td><td class="y">Nativa e grátis · comunidade pode ser gratuita</td><td class="num">G2/Capterra ~4,6/5</td></tr>
-            <tr><td><b>Memberkit</b></td><td>Área de membros com marca própria</td><td>R$ 197 / 497 / 697 por mês<br><small>até 1 mil / 5 mil / 15 mil membros</small></td><td class="n">Não · usa Panda, Vimeo ou YouTube</td><td>Não cobra · precisa de checkout externo</td><td class="p">Incorporada de outro serviço</td><td class="num">RA sem nota</td></tr>
+            <tr><td><a class="site" href="https://hotmart.com/pt-br" target="_blank" rel="noopener"><b>Hotmart</b> ↗</a></td><td>Checkout + área de membros + comunidade</td><td>9,9% + R$ 2,49 por venda<br><small>até 8,9% acima de R$ 100 mil/ano</small></td><td class="y">Sim</td><td>Pix, boleto, cartão 12x · 22 moedas</td><td class="y">Nativa (beta) · comunidade pode ser aberta</td><td class="num">RA 8,4</td></tr>
+            <tr><td><a class="site" href="https://kiwify.com.br" target="_blank" rel="noopener"><b>Kiwify</b> ↗</a></td><td>Checkout + área de membros</td><td>8,99% + R$ 2,49</td><td class="y">Sim, sem custo</td><td>Pix, boleto, cartão 12x</td><td class="p">YouTube incorporado</td><td class="num">RA 8,0</td></tr>
+            <tr><td><a class="site" href="https://www.eduzz.com" target="_blank" rel="noopener"><b>Eduzz</b> ↗</a></td><td>Checkout + área de membros (Nutror)</td><td>4,9% + R$ 2,49<br><small>8,9% via afiliado · sem % até R$ 30</small></td><td class="y">Sim</td><td>Pix, boleto, cartão · internacional</td><td class="p">YouTube incorporado</td><td class="num">RA 8,2</td></tr>
+            <tr><td><a class="site" href="https://www.monetizze.com.br" target="_blank" rel="noopener"><b>Monetizze</b> ↗</a></td><td>Checkout + área de membros</td><td>7,9% + R$ 1,50<br><small>9,9% via afiliado</small></td><td class="y">Sim</td><td>Pix, boleto, cartão</td><td class="n">Não encontrado</td><td class="num">RA 8,7 · RA1000</td></tr>
+            <tr><td><a class="site" href="https://ticto.com.br" target="_blank" rel="noopener"><b>Ticto</b> ↗</a></td><td>Checkout + área de membros (Mozart)</td><td>6,99% + R$ 2,49</td><td class="y">Sim</td><td>Pix (cai no dia), boleto, cartão</td><td class="n">Não encontrado</td><td class="num">RA 9,2 · RA1000</td></tr>
+            <tr><td><a class="site" href="https://herospark.com" target="_blank" rel="noopener"><b>HeroSpark</b> ↗</a></td><td>Tudo-em-um brasileiro</td><td>3,9% + R$ 1,00<br><small>ou planos de R$ 197 a 497/mês</small></td><td class="y">Sim</td><td>Pix, boleto, cartão 12x</td><td class="p">Anuncia encontros ao vivo, sem detalhe</td><td class="num">RA 8,6</td></tr>
+            <tr><td><a class="site" href="https://greenn.com.br" target="_blank" rel="noopener"><b>Greenn</b> ↗</a></td><td>Checkout + área de membros + assistente de IA</td><td>4,99% a 3,49% + R$ 1,00</td><td class="p">Sim · 3 GB grátis, 80 MB por arquivo</td><td>Pix (cai no dia), boleto, cartão · multimoeda</td><td class="n">Não encontrado</td><td class="num">RA 9,0 · RA1000</td></tr>
+            <tr><td><a class="site" href="https://kajabi.com" target="_blank" rel="noopener"><b>Kajabi</b> ↗</a></td><td>Plataforma internacional</td><td>US$ 143 / 199 / 399 por mês<br><small>plano anual · + taxa do cartão</small></td><td class="y">Sim</td><td>Só cartão · sem Pix</td><td class="p">Inscrição aberta · transmite por YouTube ou Zoom</td><td class="num">Trustpilot 3,4/5</td></tr>
+            <tr><td><a class="site" href="https://teachable.com" target="_blank" rel="noopener"><b>Teachable</b> ↗</a></td><td>Plataforma internacional</td><td>US$ 29 + 7,5% · US$ 69 · US$ 139 por mês<br><small>plano anual</small></td><td class="y">Sim</td><td>Só cartão · sem Pix</td><td class="n">Não tem</td><td class="num">Trustpilot 3,3/5</td></tr>
+            <tr><td><a class="site" href="https://www.skool.com" target="_blank" rel="noopener"><b>Skool</b> ↗</a></td><td>Comunidade com cursos</td><td>US$ 9 + 10% por venda<br><small>ou US$ 99 por mês</small></td><td class="y">Sim, ilimitado</td><td>Só cartão · sem Pix</td><td class="y">Nativa e grátis · comunidade pode ser gratuita</td><td class="num">G2/Capterra ~4,6/5</td></tr>
+            <tr><td><a class="site" href="https://memberkit.com.br" target="_blank" rel="noopener"><b>Memberkit</b> ↗</a></td><td>Área de membros com marca própria</td><td>R$ 197 / 497 / 697 por mês<br><small>até 1 mil / 5 mil / 15 mil membros</small></td><td class="n">Não · usa Panda, Vimeo ou YouTube</td><td>Não cobra · precisa de checkout externo</td><td class="p">Incorporada de outro serviço</td><td class="num">RA sem nota</td></tr>
           </tbody>
         </table>
       </div>
@@ -799,7 +836,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
           </tbody>
         </table>
       </div>
-      <p class="note">Ao vivo parcial: a plataforma exibe uma live feita no YouTube, Vimeo ou Panda Video. Os itens com “?” precisam ser confirmados em teste ou com o comercial de cada plataforma.</p>
+      <p class="note">Ao vivo parcial: live do YouTube, Vimeo ou Panda Video exibida na plataforma.</p>
     </div>
   </section>
 
@@ -807,7 +844,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <div class="wrap">
       <p class="eyebrow">Afiliados</p>
       <h2>Como funciona a venda por afiliados</h2>
-      <p class="lead">Afiliado é quem divulga o curso com um link próprio e ganha uma comissão por cada venda feita por esse link. A plataforma registra de onde veio a venda e divide o pagamento sozinha, sem acerto manual.</p>
+      <p class="lead">Divulgador com link próprio ganha comissão por venda; a plataforma divide o pagamento.</p>
       <div class="flow">
         <div><b>1 · Cadastro</b><p>O divulgador se afilia ao curso e recebe um link exclusivo</p></div>
         <div><b>2 · Divulgação</b><p>Ele compartilha o link no Instagram, WhatsApp, aulas ou e-mail</p></div>
@@ -818,19 +855,19 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <div class="model-col">
           <div class="mk">Vitrine aberta</div>
           <h3>Qualquer afiliado pode pedir para divulgar</h3>
-          <ul><li>O curso fica listado num catálogo público da plataforma</li><li>Afiliados que já vendem outros produtos encontram o curso e pedem para entrar</li><li>O produtor define a comissão e pode aprovar cada pedido</li></ul>
+          <ul><li>Curso em catálogo público</li><li>Produtor aprova cada afiliado e define a comissão</li></ul>
           <div class="chips"><span>Hotmart</span><span>Eduzz</span><span>Monetizze</span></div>
         </div>
         <div class="model-col">
           <div class="mk">Rede fechada</div>
           <h3>Só divulga quem o produtor convidar</h3>
-          <ul><li>Não existe catálogo público, ou ele é restrito a convidados</li><li>O produtor monta a própria rede: parceiros, ex-alunos, convidados</li><li>Mais controle sobre quem fala em nome do curso</li></ul>
+          <ul><li>Sem catálogo público</li><li>Rede própria: parceiros, ex-alunos, convidados</li></ul>
           <div class="chips"><span>Kiwify</span><span>Ticto</span><span>Greenn</span><span>Kajabi</span></div>
         </div>
         <div class="model-col">
           <div class="mk">Sem programa</div>
           <h3>A plataforma não faz a divisão</h3>
-          <ul><li>A Memberkit não vende, então o programa de afiliados fica no checkout conectado a ela</li><li>Em HeroSpark, Teachable e Skool o recurso não foi confirmado nas fontes</li></ul>
+          <ul><li>Afiliados ficam no checkout externo</li></ul>
           <div class="chips"><span>Memberkit</span></div>
         </div>
       </div>
@@ -846,8 +883,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
           </tbody>
         </table>
       </div>
-      <p class="note">A taxa da plataforma é descontada antes da comissão do afiliado, que é definida pelo produtor.</p>
-      <div class="callout"><b>Para a RM:</b> o programa de afiliados pode pagar comissão aos convidados dos webinars, a cirurgiões parceiros e a perfis médicos que indicarem o curso. Para um público restrito a médicos, a rede fechada dá mais controle sobre quem divulga.</div>
+            <div class="callout"><b>Para a RM:</b> comissão para convidados dos webinars e cirurgiões parceiros. Com público só de médicos, a rede fechada dá mais controle.</div>
     </div>
   </section>
 
@@ -855,13 +891,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <div class="wrap">
       <p class="eyebrow">Ao vivo</p>
       <h2>Quem pode substituir o Zoom nos webinars abertos</h2>
-      <p class="lead">Hoje o webinar mensal é transmitido por um Zoom pago. Três plataformas têm algo que ajuda a fazer isso dentro delas, com o público entrando por cadastro.</p>
+      <p class="lead">O webinar mensal da RM roda hoje em Zoom pago.</p>
       <div class="cols3">
-        <div class="box"><h3>Skool</h3><ul><li>Chamada ao vivo própria, inclusa em todos os planos, sem custo extra</li><li>Gravação automática fica disponível na comunidade</li><li>A comunidade pode ser gratuita: qualquer pessoa entra com cadastro</li><li>Funciona bem para dezenas a algumas centenas de pessoas; acima de mil, o Zoom ainda é melhor</li></ul></div>
-        <div class="box"><h3>Hotmart</h3><ul><li>Live dentro da área de membros, ainda em versão beta</li><li>Comunidades podem ser abertas, exclusivas para compradores ou pagas</li><li>Limite de participantes não divulgado: vale testar antes de decidir</li></ul></div>
-        <div class="box"><h3>Kajabi</h3><ul><li>Cria a página de inscrição aberta, a sala do evento e os lembretes por e-mail</li><li>A transmissão em si roda no YouTube ou no Zoom</li><li>Cobrança só em dólar e só no cartão</li></ul></div>
+        <div class="box"><h3>Skool</h3><ul><li>Live própria em todos os planos</li><li>Gravação automática</li><li>Comunidade pode ser gratuita</li><li>Bom até algumas centenas de pessoas</li></ul></div>
+        <div class="box"><h3>Hotmart</h3><ul><li>Live na área de membros (beta)</li><li>Comunidade aberta, de compradores ou paga</li><li>Limite de participantes não divulgado</li></ul></div>
+        <div class="box"><h3>Kajabi</h3><ul><li>Inscrição aberta e lembretes por e-mail</li><li>Transmissão via YouTube ou Zoom</li><li>Só dólar e cartão</li></ul></div>
       </div>
-      <div class="callout"><b>Com qualquer plataforma:</b> a live pode ser feita no YouTube (gratuito) ou no Panda Video (R$ 0,21 a R$ 0,57 por minuto em Full HD, com gravação automática) e exibida dentro da área do curso.</div>
+      <div class="callout"><b>Plano B:</b> YouTube Live (grátis) ou Panda Video (R$ 0,21 a 0,57/min em Full HD) incorporado na área do curso.</div>
     </div>
   </section>
 
@@ -869,7 +905,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <div class="wrap">
       <p class="eyebrow">Suporte</p>
       <h2>Como cada uma atende quem reclama</h2>
-      <p class="lead">Notas públicas de atendimento. As brasileiras estão no Reclame Aqui; as internacionais, no Trustpilot e no G2.</p>
+      <p class="lead">Reclame Aqui para as brasileiras; Trustpilot e G2 para as internacionais.</p>
       <div class="tbl">
         <table class="sup">
           <thead><tr><th>Plataforma</th><th>Nota</th><th>Reclamações resolvidas</th><th>Voltaria a fazer negócio</th><th>Fonte</th></tr></thead>
@@ -888,7 +924,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
           </tbody>
         </table>
       </div>
-      <p class="note">As notas do Reclame Aqui incluem reclamações de alunos de outros produtores, que costumam culpar a plataforma por problemas do curso. O estudo original citava a Eduzz com 6,8 a 7,5; a nota atual é 8,2. Kajabi, Teachable e Skool atendem só em inglês.</p>
+      <p class="note">Kajabi, Teachable e Skool atendem só em inglês.</p>
     </div>
   </section>
 
@@ -897,15 +933,19 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       <p class="eyebrow">Leitura para a Rhinoplasty Minds</p>
       <h2>O que a pesquisa de plataformas mostra</h2>
       <div class="takeaways">
-        <div class="tk"><div class="n">1</div><div><h3>Hospedagem quase sempre vem junto</h3><p>Dez das onze plataformas hospedam os vídeos. Só a Memberkit exige contratar um serviço à parte, como Panda Video ou Vimeo.</p></div></div>
-        <div class="tk"><div class="n">2</div><div><h3>Percentual por venda ou mensalidade</h3><p>As brasileiras cobram por venda, sem custo fixo. Numa venda de R$ 6 mil, perto da média do mercado, a taxa vai de cerca de R$ 296 na Eduzz a R$ 596 na Hotmart. As internacionais e a Memberkit cobram mensalidade.</p></div></div>
-        <div class="tk"><div class="n">3</div><div><h3>Pix e 12x só nas brasileiras</h3><p>Kajabi, Teachable e Skool recebem só cartão. Para um curso de alguns milhares de reais vendido no Brasil, o parcelamento pesa na conversão.</p></div></div>
-        <div class="tk"><div class="n">4</div><div><h3>Duas opções para tirar o Zoom</h3><p>Skool e Hotmart têm live própria e permitem uma área aberta com cadastro. Nas demais, a live entra incorporada do YouTube ou do Panda Video.</p></div></div>
+        <div class="tk"><div class="n">1</div><div><h3>Hotmart cobre o cenário ideal</h3><p>CRM validado por turma, vídeo, live, comunidade e e-mail automático, sem mensalidade.</p></div></div>
+        <div class="tk"><div class="n">2</div><div><h3>Taxa por venda ou mensalidade</h3><p>Numa venda de R$ 6 mil, a taxa vai de cerca de R$ 296 (Eduzz) a R$ 596 (Hotmart).</p></div></div>
+        <div class="tk"><div class="n">3</div><div><h3>Pix e 12x só nas brasileiras</h3><p>Kajabi, Teachable e Skool recebem só cartão. Num curso de milhares de reais, o parcelamento pesa.</p></div></div>
+        <div class="tk"><div class="n">4</div><div><h3>Zoom pode sair</h3><p>Testar a live da Hotmart; se não servir, YouTube Live incorporado.</p></div></div>
       </div>
       <details class="src" style="color:var(--gray-d)">
         <summary>Fontes</summary>
         <ul>
-          <li>Estudo “Comparativo de Plataformas de Cursos”, enviado pela equipe</li>
+          <li>Estudo “Comparativo de Plataformas de Cursos”</li>
+          <li><a style="color:var(--sky)" href="https://help.hotmart.com/pt-br/article/115001854571/como-criar-e-gerenciar-turmas-no-hotmart-club-" target="_blank" rel="noopener">Hotmart · turmas</a></li>
+          <li><a style="color:var(--sky)" href="https://help.hotmart.com/pt-br/article/15584344141197/como-fazer-a-gestao-de-alunos-no-hotmart-club-" target="_blank" rel="noopener">Hotmart · gestão de alunos</a></li>
+          <li><a style="color:var(--sky)" href="https://help.hotmart.com/pt-br/article/43105707217677/como-funcionam-as-automac-es-de-e-mail-no-hotmart-send-" target="_blank" rel="noopener">Hotmart Send · automações</a></li>
+          <li><a style="color:var(--sky)" href="https://sistemas.cfm.org.br/listamedicos/arquivos/manualwebservices.pdf" target="_blank" rel="noopener">CFM · webservice de consulta</a></li>
           <li><a style="color:var(--sky)" href="https://hotmart.com/pt-br/taxa-hotmart" target="_blank" rel="noopener">Hotmart · taxas</a></li>
           <li><a style="color:var(--sky)" href="https://help.hotmart.com/pt-BR/article/como-criar-uma-live-na-sua-area-de-membros-da-hotmart-beta-/4410372886669" target="_blank" rel="noopener">Hotmart · live na área de membros (beta)</a></li>
           <li><a style="color:var(--sky)" href="https://hotmart.com/pt-br/comunidade-online" target="_blank" rel="noopener">Hotmart · comunidades</a></li>
@@ -951,7 +991,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 (function(){
   var views=[].slice.call(document.querySelectorAll(".view"));
   var navs=[].slice.call(document.querySelectorAll(".top nav a"));
-  var anchorMap={"m-publico":"mercado","m-cenario":"mercado","m-concorrentes":"mercado","m-tabela":"mercado","m-presencial":"mercado","m-outras":"mercado","m-leitura":"mercado","f-formatos":"ferramentas","f-comparativo":"ferramentas","f-funcoes":"ferramentas","f-afiliados":"ferramentas","f-aovivo":"ferramentas","f-suporte":"ferramentas","f-leitura":"ferramentas"};
+  var anchorMap={"m-publico":"mercado","m-cenario":"mercado","m-concorrentes":"mercado","m-tabela":"mercado","m-presencial":"mercado","m-outras":"mercado","m-leitura":"mercado","f-requisitos":"ferramentas","f-formatos":"ferramentas","f-comparativo":"ferramentas","f-funcoes":"ferramentas","f-afiliados":"ferramentas","f-aovivo":"ferramentas","f-suporte":"ferramentas","f-leitura":"ferramentas"};
   function route(){
     var h=(location.hash||"#inicio").slice(1);
     var v=anchorMap[h]||h;
