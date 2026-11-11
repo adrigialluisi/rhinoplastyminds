@@ -206,7 +206,9 @@ details.src ul{columns:2;column-gap:32px;padding-left:18px;margin-top:10px}
 details.src li{break-inside:avoid;margin-bottom:4px}
 @media (max-width:700px){details.src ul{columns:1}}
 /* plataformas */
-#v-ferramentas section[id^="f-"]{scroll-margin-top:120px}
+#v-ferramentas section[id^="f-"],#v-resumo section[id^="r-"]{scroll-margin-top:120px}
+.box ol{margin:0;padding-left:18px;color:var(--soft-d);font-size:14.5px;display:grid;gap:8px}
+.cc .src{text-decoration:none;font-weight:700}
 .fmt{border-top:1px solid var(--line)}
 .fmt-h,.fmt-r{display:grid;grid-template-columns:1.2fr 1.3fr 1fr;gap:24px;padding:18px 0;border-bottom:1px solid var(--line);align-items:start}
 .fmt-h{padding:10px 0;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--blue)}
@@ -242,6 +244,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       <a href="#hoje" data-v="hoje">O que temos hoje</a>
       <a href="#mercado" data-v="mercado">Mercado e concorrentes</a>
       <a href="#ferramentas" data-v="ferramentas">Plataformas</a>
+      <a href="#resumo" data-v="resumo">Resumo e continuidade</a>
     </nav>
   </div>
 </header>
@@ -268,6 +271,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
             <li><a href="#mercado">Mercado e concorrentes</a></li>
             <li><a href="#ferramentas">Análise de plataformas</a></li>
             <li><span>Análise de público <em>em breve</em></span></li>
+            <li><a href="#resumo">Resumo e continuidade</a></li>
           </ul>
         </div>
         <div class="phase off">
@@ -726,8 +730,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       <h2>Plataformas para hospedar e vender o curso</h2>
       <p class="lead">Onde hospedar, vender e transmitir o curso da RM.</p>
       <div class="kpis">
-        <div class="kpi"><b>11</b><span>plataformas analisadas</span><small>Brasileiras e internacionais</small></div>
-        <div class="kpi"><b>10 de 11</b><span>hospedam os vídeos</span><small>Só a Memberkit precisa de serviço à parte</small></div>
+        <div class="kpi"><b>12</b><span>plataformas analisadas</span><small>Brasileiras, internacionais e o white label da DeuLaudo</small></div>
+        <div class="kpi"><b>10 de 12</b><span>hospedam os vídeos</span><small>Memberkit precisa de serviço à parte; DeuLaudo a definir</small></div>
         <div class="kpi"><b>7</b><span>cobram o aluno com Pix e cartão em 12x</span><small>Todas brasileiras</small></div>
         <div class="kpi"><b>2</b><span>têm live própria que pode ser aberta</span><small>Skool e Hotmart</small></div>
       </div>
@@ -749,10 +753,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
             <tr><td><a class="site" href="https://kajabi.com" target="_blank" rel="noopener"><b>Kajabi</b> ↗</a></td><td class="p">◐ manual</td><td class="y">✓</td><td class="p">◐ YouTube/Zoom</td><td class="y">✓</td><td class="y">✓</td><td>US$ 143+/mês · só cartão</td></tr>
             <tr><td><a class="site" href="https://www.skool.com" target="_blank" rel="noopener"><b>Skool</b> ↗</a></td><td class="y">✓ aprovação na entrada</td><td class="y">✓</td><td class="y">✓ nativa, grátis</td><td class="y">✓</td><td class="n">—</td><td>US$ 99/mês · só cartão</td></tr>
                       <tr><td><a class="site" href="https://herospark.com" target="_blank" rel="noopener"><b>HeroSpark</b> ↗</a></td><td class="p">◐ manual</td><td class="y">✓</td><td class="u">? a confirmar</td><td class="u">? a confirmar</td><td class="y">✓</td><td>% por venda ou R$ 197–497/mês · Pix, 12x</td></tr>
+            <tr><td><a class="site" href="https://deulaudo.com" target="_blank" rel="noopener"><b>DeuLaudo</b> ↗</a><br><small>white label</small></td><td class="p">◐ CRM obrigatório no cadastro, conferência manual</td><td class="p">◐ Vimeo · a definir, tende a ficar com a RM</td><td class="n">— Zoom/Meet e upload</td><td class="p">◐ comentários e estrelas por aula</td><td class="n">— feito por agência</td><td class="u">? custo não enviado · Guru + Asaas</td></tr>
           </tbody>
         </table>
       </div>
       <p class="note">As demais atendem 2 ou 3 itens: curso e vídeo, live só incorporada e e-mail apenas transacional. Hubla avaliada e descartada: mesmo padrão da Kiwify, sem live.</p>
+      <h3 style="margin-top:40px">DeuLaudo · proposta de white label</h3>
+      <p style="color:var(--gray);font-size:15px;max-width:72ch;margin-bottom:16px">Plataforma de cursos da DeuLaudo com a marca da RM. A RM seria o primeiro cliente white label, com condição especial prometida. Levantamento da reunião com Daniel Cardoso, CEO, em 30/10/2026.</p>
+      <div class="cols3">
+        <div class="box"><h3>O que eles têm</h3><ul><li>Aulas organizadas por módulos e temas</li><li>Comentários e avaliação por estrelas em cada aula, com aviso ao administrador</li><li>PDF anexado a cada aula</li><li>CRM como campo obrigatório antes de liberar o curso</li><li>Suporte ao aluno com CS e tech próprios</li><li>Pagamento por Guru + Asaas</li><li>Marca da RM e links do professor na descrição da aula</li></ul></div>
+        <div class="box"><h3>O que fica por conta da RM</h3><ul><li>Hospedagem dos vídeos: eles usam Vimeo, mas a tendência é a RM contratar a própria</li><li>Live: Zoom ou Meet, com download e upload manual</li><li>E-mail e disparos: ferramenta ou agência à parte</li><li>Comunidade além dos comentários das aulas</li><li>Conferência do CRM no CFM, enquanto não for automática</li><li>Portal da frente (agenda, parceiros)</li></ul></div>
+        <div class="box"><h3>Pendente com a DeuLaudo</h3><ul><li>Preço do white label</li><li>Taxas do Guru + Asaas</li><li>Quem hospeda e paga o Vimeo</li><li>Prazo para live dentro da plataforma</li><li>Prazo para validação automática do CRM</li><li>Propriedade da base de alunos e saída da plataforma</li></ul></div>
+      </div>
       <h3 style="margin-top:40px">Validação de CRM na Hotmart</h3>
       <div class="flow">
         <div><b>1 · Compra</b><p>Aluno entra na turma “Aguardando validação”, que só mostra as boas-vindas e o formulário de CRM + UF</p></div>
@@ -767,14 +779,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <div class="kpi"><b style="font-size:20px">E-mail</b><span>MailerLite (grátis até 500 contatos) ou Brevo (300 e-mails/dia)</span><small>Para plataformas sem e-mail próprio</small></div>
         <div class="kpi"><b style="font-size:20px">Grupo</b><span>Comunidades do WhatsApp (grátis)</span><small>Link enviado após validar o CRM</small></div>
       </div>
-      <div class="callout"><b>Para a RM:</b> a Hotmart atende os cinco requisitos sem mensalidade. Antes de decidir, testar o limite da live beta. A validação começa manual e pode ser automatizada depois com o serviço pago de consulta do CFM.</div>
+      <div class="callout"><b>Para a RM:</b> a Hotmart atende os cinco requisitos sem mensalidade. Antes de decidir, testar o limite da live beta. A validação começa manual e pode ser automatizada depois com o serviço pago de consulta do CFM. A DeuLaudo atende três requisitos em parte e não atende live nem e-mail; só compensa se o preço cobrir o Vimeo e a live à parte, ou se live e CRM automático entrarem com prazo.</div>
     </div>
   </section>
 
   <section class="band light" id="f-formatos">
     <div class="wrap">
       <p class="eyebrow">Formatos</p>
-      <h2>Cinco jeitos de montar um curso online</h2>
+      <h2>Seis jeitos de montar um curso online</h2>
       <p class="lead">Percentual por venda ou mensalidade fixa.</p>
       <div class="fmt">
         <div class="fmt-h"><span>Formato</span><span>Plataformas</span><span>Como a plataforma cobra</span></div>
@@ -783,6 +795,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <div class="fmt-r"><div><h3>Plataforma internacional</h3><p>Site, cursos, funis e automações; cobrança em dólar</p></div><div class="chips"><span>Kajabi</span><span>Teachable</span></div><p>Mensalidade em dólar + taxa do cartão</p></div>
         <div class="fmt-r"><div><h3>Comunidade com cursos</h3><p>Feed de discussão no centro, aulas e encontros ao vivo em volta</p></div><div class="chips"><span>Skool</span></div><p>US$ 9 + 10% por venda ou US$ 99 por mês</p></div>
         <div class="fmt-r"><div><h3>Área de membros com marca própria</h3><p>Escola no domínio da marca; não vende nem hospeda vídeo</p></div><div class="chips"><span>Memberkit</span></div><p>Mensalidade em reais pelo número de membros</p></div>
+        <div class="fmt-r"><div><h3>White label de parceiro</h3><p>Plataforma pronta de outra escola, com a marca da RM</p></div><div class="chips"><span>DeuLaudo</span></div><p>A definir · preço ainda não enviado</p></div>
       </div>
     </div>
   </section>
@@ -790,7 +803,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <section class="band light" id="f-comparativo">
     <div class="wrap">
       <p class="eyebrow">Comparativo</p>
-      <h2>As onze plataformas lado a lado</h2>
+      <h2>As doze plataformas lado a lado</h2>
       <div class="tbl">
         <table>
           <thead><tr><th>Plataforma</th><th>Formato</th><th>Preço</th><th>Hospeda vídeo</th><th>Pagamento do aluno</th><th>Ao vivo</th><th>Suporte</th></tr></thead>
@@ -806,6 +819,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
             <tr><td><a class="site" href="https://teachable.com" target="_blank" rel="noopener"><b>Teachable</b> ↗</a></td><td>Plataforma internacional</td><td>US$ 29 + 7,5% · US$ 69 · US$ 139 por mês<br><small>plano anual</small></td><td class="y">Sim</td><td>Só cartão · sem Pix</td><td class="n">Não tem</td><td class="num">Trustpilot 3,3/5</td></tr>
             <tr><td><a class="site" href="https://www.skool.com" target="_blank" rel="noopener"><b>Skool</b> ↗</a></td><td>Comunidade com cursos</td><td>US$ 9 + 10% por venda<br><small>ou US$ 99 por mês</small></td><td class="y">Sim, ilimitado</td><td>Só cartão · sem Pix</td><td class="y">Nativa e grátis · comunidade pode ser gratuita</td><td class="num">G2/Capterra ~4,6/5</td></tr>
             <tr><td><a class="site" href="https://memberkit.com.br" target="_blank" rel="noopener"><b>Memberkit</b> ↗</a></td><td>Área de membros com marca própria</td><td>R$ 197 / 497 / 697 por mês<br><small>até 1 mil / 5 mil / 15 mil membros</small></td><td class="n">Não · usa Panda, Vimeo ou YouTube</td><td>Não cobra · precisa de checkout externo</td><td class="p">Incorporada de outro serviço</td><td class="num">RA sem nota</td></tr>
+            <tr><td><a class="site" href="https://deulaudo.com" target="_blank" rel="noopener"><b>DeuLaudo</b> ↗</a></td><td>White label · plataforma da DeuLaudo com marca da RM</td><td>Não enviado<br><small>condição especial por ser o primeiro cliente</small></td><td class="p">Vimeo · a definir se a RM paga à parte</td><td>Guru + Asaas · taxas a confirmar</td><td class="n">Não · Zoom ou Meet e upload</td><td class="num">CS e tech próprios</td></tr>
           </tbody>
         </table>
       </div>
@@ -833,6 +847,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
             <tr><td><b>Teachable</b></td><td class="y">✓</td><td class="y">✓</td><td class="p" title="Só no plano Growth">◐</td><td class="u">?</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td><td class="u">?</td><td class="y">✓</td></tr>
             <tr><td><b>Skool</b></td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="u">?</td><td class="y">✓</td></tr>
             <tr><td><b>Memberkit</b></td><td class="n">—</td><td class="u">?</td><td class="y">✓</td><td class="y">✓</td><td class="p">◐</td><td class="n">—</td><td class="y">✓</td><td class="n">—</td><td class="p" title="Pelo checkout conectado">◐</td></tr>
+            <tr><td><b>DeuLaudo</b></td><td class="p" title="Vimeo; hospedagem a definir">◐</td><td class="u" title="Tem app próprio; não confirmado no white label">?</td><td class="u">?</td><td class="p" title="Comentários por aula">◐</td><td class="n">—</td><td class="u" title="Guru oferece vários formatos; a confirmar">?</td><td class="y" title="White label">✓</td><td class="u">?</td><td class="u">?</td></tr>
           </tbody>
         </table>
       </div>
@@ -937,11 +952,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <div class="tk"><div class="n">2</div><div><h3>Taxa por venda ou mensalidade</h3><p>Numa venda de R$ 6 mil, a taxa vai de cerca de R$ 296 (Eduzz) a R$ 596 (Hotmart).</p></div></div>
         <div class="tk"><div class="n">3</div><div><h3>Pix e 12x só nas brasileiras</h3><p>Kajabi, Teachable e Skool recebem só cartão. Num curso de milhares de reais, o parcelamento pesa.</p></div></div>
         <div class="tk"><div class="n">4</div><div><h3>Zoom pode sair</h3><p>Testar a live da Hotmart; se não servir, YouTube Live incorporado.</p></div></div>
+        <div class="tk"><div class="n">5</div><div><h3>DeuLaudo dá marca própria, mas cobre só parte</h3><p>Vídeo, CRM e comunidade em parte; sem live e sem e-mail. Decisão depende do preço, que ainda não chegou.</p></div></div>
       </div>
       <details class="src" style="color:var(--gray-d)">
         <summary>Fontes</summary>
         <ul>
           <li>Estudo “Comparativo de Plataformas de Cursos”</li>
+          <li>Reunião com Daniel Cardoso, CEO da DeuLaudo, 30/10/2026</li>
           <li><a style="color:var(--sky)" href="https://help.hotmart.com/pt-br/article/115001854571/como-criar-e-gerenciar-turmas-no-hotmart-club-" target="_blank" rel="noopener">Hotmart · turmas</a></li>
           <li><a style="color:var(--sky)" href="https://help.hotmart.com/pt-br/article/15584344141197/como-fazer-a-gestao-de-alunos-no-hotmart-club-" target="_blank" rel="noopener">Hotmart · gestão de alunos</a></li>
           <li><a style="color:var(--sky)" href="https://help.hotmart.com/pt-br/article/43105707217677/como-funcionam-as-automac-es-de-e-mail-no-hotmart-send-" target="_blank" rel="noopener">Hotmart Send · automações</a></li>
@@ -978,20 +995,179 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
           <li><a style="color:var(--sky)" href="https://www.trustpilot.com/review/teachable.com" target="_blank" rel="noopener">Trustpilot · Teachable</a></li>
         </ul>
       </details>
-      <div class="next" style="margin-top:36px"><a style="color:var(--sky)" href="#mercado">← Mercado e concorrentes</a><a style="color:var(--sky)" href="#inicio">Voltar aos entregáveis →</a></div>
+      <div class="next" style="margin-top:36px"><a style="color:var(--sky)" href="#mercado">← Mercado e concorrentes</a><a style="color:var(--sky)" href="#resumo">Resumo e continuidade →</a></div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= RESUMO E CONTINUIDADE ================= -->
+<div class="view" id="v-resumo" data-view="resumo" hidden>
+  <section class="band dark">
+    <div class="wrap">
+      <p class="eyebrow">Fase 1 · Diagnóstico · Síntese</p>
+      <h2>Resumo e sugestão de continuidade</h2>
+      <p class="lead">O que cada etapa mostrou e o caminho sugerido para colocar o curso no ar: plataforma, preço, custos e próximos passos.</p>
+      <div class="kpis">
+        <div class="kpi"><b>Hotmart</b><span>plataforma sugerida</span><small>Atende os cinco requisitos sem mensalidade</small></div>
+        <div class="kpi"><b>R$ 3,9–4,9 mil</b><span>preço sugerido do curso</span><small>Acesso anual, à vista ou em 12x</small></div>
+        <div class="kpi"><b>R$ 3,9–6 mil</b><span>jurídico antes do lançamento</span><small>Assessoria por 2 a 3 meses ou pacote fechado</small></div>
+        <div class="kpi"><b>R$ 2,3–4 mil</b><span>marketing por mês, após o lançamento</span><small>Custo de médio prazo</small></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="subnav-bar"><div class="wrap"><nav class="subnav" aria-label="Seções do resumo"><a href="#r-etapas">Resumo das etapas</a><a href="#r-plataforma">Plataforma e ferramentas</a><a href="#r-preco">Preço do curso</a><a href="#r-custos">Custos previsíveis</a><a href="#r-passos">Próximos passos</a></nav></div></div>
+
+  <section class="band light" id="r-etapas">
+    <div class="wrap">
+      <p class="eyebrow">Resumo das etapas</p>
+      <h2>O que o diagnóstico mostrou</h2>
+      <div class="cgrid">
+        <div class="cc"><div><span class="tag">Etapa 01</span><h3 style="margin-top:8px">O que temos hoje</h3></div><p style="color:var(--gray)">Acervo de webinars mensais desde 2023, com convidados reconhecidos e formato de casos reais. A estrutura depende de upload manual, os vídeos podem ser baixados e o acervo só se organiza por data.</p><a class="src" href="#hoje">Ver etapa →</a></div>
+        <div class="cc"><div><span class="tag">Etapa 02</span><h3 style="margin-top:8px">Mercado e concorrentes</h3></div><p style="color:var(--gray)">Público comprador de 3 a 4 mil cirurgiões. Cursos online custam em média R$ 6,3 mil e quase todos vendem o método de um único autor. A RM tem espaço como escola de vários professores.</p><a class="src" href="#mercado">Ver etapa →</a></div>
+        <div class="cc"><div><span class="tag">Etapa 03</span><h3 style="margin-top:8px">Plataformas</h3></div><p style="color:var(--gray)">12 opções avaliadas. A Hotmart é a única que cobre acesso com CRM, vídeo, live, comunidade e e-mail sem mensalidade. A DeuLaudo oferece marca própria, mas cobre só parte e o preço ainda não chegou.</p><a class="src" href="#ferramentas">Ver etapa →</a></div>
+        <div class="cc"><div><span class="tag">Etapa 04</span><h3 style="margin-top:8px">Público · pesquisa com a rede</h3></div><p style="color:var(--gray)">20 respostas, 19 de otorrinos, a maioria operando há mais de 10 anos. Querem aulas gravadas por tema e cirurgias narradas, dedicam até 1 hora por semana, e 16 de 20 têm interesse no portal, 10 deles dependendo do valor.</p><span class="src" style="color:var(--gray)">Análise completa em breve</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band light" id="r-plataforma">
+    <div class="wrap">
+      <p class="eyebrow">Plataforma e ferramentas</p>
+      <h2>O que usar para colocar o curso no ar</h2>
+      <div class="tbl">
+        <table class="sup">
+          <thead><tr><th>Necessidade</th><th>Sugestão</th><th>Por quê</th><th>Custo</th></tr></thead>
+          <tbody>
+            <tr class="ref"><td><b>Plataforma</b></td><td>Hotmart</td><td>Vende, recebe e entrega no mesmo lugar, com Pix e 12x</td><td class="num">9,9% + R$ 2,49 por venda</td></tr>
+            <tr><td><b>Acesso com CRM</b></td><td>Turma “Aguardando validação” + conferência no portal do CFM</td><td>Manual no início; automatizar quando o volume crescer</td><td class="num">Sem custo no início</td></tr>
+            <tr><td><b>Aulas ao vivo</b></td><td>Live da Hotmart (beta); plano B: YouTube Live não listado</td><td>Tira o Zoom pago e o upload manual</td><td class="num">Sem custo</td></tr>
+            <tr><td><b>Comunidade</b></td><td>Comunidade de compradores da Hotmart</td><td>Discussão de casos foi o item mais valorizado na pesquisa</td><td class="num">Incluída</td></tr>
+            <tr><td><b>E-mail</b></td><td>Hotmart Send</td><td>Avisos de aula nova e lançamentos, ligados à plataforma</td><td class="num">Conforme número de contatos</td></tr>
+            <tr><td><b>Portal da frente</b></td><td>Site da RM com agenda de congressos, parceiros e acesso às aulas</td><td>Desenvolvido pela consultoria; leva para a plataforma</td><td class="num">Hospedagem do site</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout"><b>DeuLaudo segue em avaliação:</b> reavaliar quando o custo chegar. Só compensa se o preço cobrir o Vimeo e a live à parte, ou se live e validação automática do CRM entrarem com prazo definido.</div>
+    </div>
+  </section>
+
+  <section class="band light" id="r-preco">
+    <div class="wrap">
+      <p class="eyebrow">Preço do curso</p>
+      <h2>Faixa sugerida para o doutor decidir</h2>
+      <p class="lead">Acesso de 12 meses, à vista ou em 12x, com renovação com desconto.</p>
+      <div class="aff" style="margin-top:0">
+        <div class="model-col">
+          <div class="mk">Abaixo da faixa</div>
+          <h3>Perto do Perface</h3>
+          <ul><li>O Rhino Masterclass, também com vários professores, cobra R$ 1.080</li><li>Exige volume alto de vendas para pagar os custos fixos</li></ul>
+          <div class="range"><b>até R$ 3,9 mil</b><span>risco de desvalorizar o curso</span></div>
+        </div>
+        <div class="model-col" style="border:2px solid var(--sky)">
+          <div class="mk">Sugerido</div>
+          <h3>Abaixo dos cursos autorais</h3>
+          <ul><li>Acervo reeditado por tema + webinar mensal ao vivo + comunidade</li><li>Metade dos interessados na pesquisa condiciona ao valor</li><li>Entrada de lançamento, com espaço para subir depois</li></ul>
+          <div class="range"><b>R$ 3,9 – 4,9 mil</b><span>12x de R$ 325 a R$ 408</span></div>
+        </div>
+        <div class="model-col">
+          <div class="mk">Acima da faixa</div>
+          <h3>Mesmo patamar dos autorais</h3>
+          <ul><li>Média de R$ 6,3 mil e mediana de R$ 6,99 mil</li><li>Concorre com cursos de um método, com cirurgias completas</li></ul>
+          <div class="range"><b>R$ 6 mil ou mais</b><span>faz sentido depois de validar a demanda</span></div>
+        </div>
+      </div>
+      <h3 style="margin-top:40px">Quantas vendas pagam os custos</h3>
+      <div class="tbl" style="margin-top:12px">
+        <table class="sup">
+          <thead><tr><th>Preço</th><th>Fica com a RM após a Hotmart</th><th>Jurídico (R$ 3,9 a 6 mil)</th><th>Marketing (R$ 2,3 a 4 mil/mês)</th></tr></thead>
+          <tbody>
+            <tr><td class="num"><b>R$ 3.900</b></td><td class="num">R$ 3.511</td><td class="num">2 vendas, uma vez</td><td class="num">1 a 2 vendas por mês</td></tr>
+            <tr class="ref"><td class="num"><b>R$ 4.400</b></td><td class="num">R$ 3.962</td><td class="num">1 a 2 vendas, uma vez</td><td class="num">cerca de 1 venda por mês</td></tr>
+            <tr><td class="num"><b>R$ 4.900</b></td><td class="num">R$ 4.412</td><td class="num">1 a 2 vendas, uma vez</td><td class="num">1 venda por mês</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Taxa da Hotmart: 9,9% + R$ 2,49 por venda. Não inclui impostos da PJ nem verba de anúncios.</p>
+    </div>
+  </section>
+
+  <section class="band light" id="r-custos">
+    <div class="wrap">
+      <p class="eyebrow">Custos previsíveis</p>
+      <h2>O que entra antes e depois do lançamento</h2>
+      <div class="tbl">
+        <table class="sup">
+          <thead><tr><th>Item</th><th>Prazo</th><th>Fornecedor</th><th>O que inclui</th><th>Valor</th></tr></thead>
+          <tbody>
+            <tr><td><b>Abertura da PJ</b></td><td>Curto · antes do lançamento</td><td>Contabilidade do doutor</td><td>Contrato social com os sócios, CNPJ, regime tributário e conta PJ</td><td class="num">A confirmar com a contabilidade</td></tr>
+            <tr><td><b>Contratos jurídicos</b><br><small>opção 1 · pacote</small></td><td>Curto · antes do lançamento</td><td>Thais Coelho</td><td>Pacote: termos de privacidade, políticas da plataforma, contrato com professor e contrato com aluno</td><td class="num">R$ 6.000<br><small>50% + 50%</small></td></tr>
+            <tr><td><b>Contratos jurídicos</b><br><small>opção 2 · mensal</small></td><td>Curto · antes do lançamento</td><td>Andressa Farias Advocacia</td><td>Assessoria mensal: elaboração, revisão e acompanhamento de contratos e documentos legais, atendimento diário</td><td class="num">R$ 1.960/mês<br><small>cancela a qualquer momento, sem multa</small></td></tr>
+            <tr><td><b>Plataforma</b></td><td>A partir do lançamento</td><td>Hotmart</td><td>Área de membros, checkout, live, comunidade e e-mail</td><td class="num">9,9% + R$ 2,49 por venda</td></tr>
+            <tr><td><b>Marketing</b></td><td>Médio · após o lançamento</td><td>MedImpulso · Proposta 01</td><td>Consultoria estratégica, tráfego pago e dashboard</td><td class="num">R$ 2.300/mês</td></tr>
+            <tr><td><b>Marketing</b></td><td>Médio · após o lançamento</td><td>MedImpulso · Proposta 02</td><td>01 + redes sociais (8 posts/mês), até 4 e-mails e 2 disparos de WhatsApp por mês</td><td class="num">R$ 3.500/mês</td></tr>
+            <tr><td><b>Marketing</b></td><td>Médio · após o lançamento</td><td>MedImpulso · Proposta 03</td><td>Igual à 02, com 12 posts/mês</td><td class="num">R$ 4.000/mês</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Contratos da MedImpulso sem fidelidade. A verba dos anúncios não aparece nas propostas; confirmar com a agência. Proposta da Andressa válida por 30 dias a partir de 14/10/2026.</p>
+
+      <h3 style="margin-top:40px">Jurídico: pacote fechado ou assessoria pelo tempo necessário</h3>
+      <p style="color:var(--gray);font-size:15px;max-width:72ch;margin-bottom:16px">A proposta da Andressa fala em 6 meses, mas ela confirmou que os contratos dela não têm multa por rescisão e que o prazo pode ser o que a RM quiser. Na prática, a RM paga só os meses que usar.</p>
+      <div class="models">
+        <div class="model-col">
+          <div class="mk">Pacote fechado · Thais Coelho</div>
+          <h3>Preço fixo por entrega</h3>
+          <ul><li>Quatro documentos: termos de privacidade, políticas da plataforma, contrato com professor e contrato com aluno</li><li>Valor não muda se a produção atrasar</li><li>O que ficar fora do pacote é cobrado à parte</li></ul>
+          <div class="range"><b>R$ 6.000</b><span>50% no início + 50% na entrega</span></div>
+        </div>
+        <div class="model-col" style="border:2px solid var(--sky)">
+          <div class="mk">Assessoria mensal · Andressa Farias</div>
+          <h3>Paga só os meses de uso</h3>
+          <ul><li>Cobre os mesmos documentos e os que surgirem: cessão de direitos dos professores, imagem de pacientes, evento presencial</li><li>Atendimento diário para dúvidas</li><li>Prazo livre e rescisão sem multa, confirmados pela Andressa</li></ul>
+          <div class="range"><b>R$ 1.960/mês</b><span>2 meses = R$ 3.920 · 3 meses = R$ 5.880</span></div>
+        </div>
+      </div>
+      <div class="tbl" style="margin-top:12px">
+        <table class="sup">
+          <thead><tr><th>Tempo de assessoria</th><th>Andressa</th><th>Thais (pacote)</th><th>Mais barato</th></tr></thead>
+          <tbody>
+            <tr class="ref"><td><b>2 meses</b></td><td class="num">R$ 3.920</td><td class="num">R$ 6.000</td><td class="y">Andressa · R$ 2.080 a menos</td></tr>
+            <tr><td><b>3 meses</b></td><td class="num">R$ 5.880</td><td class="num">R$ 6.000</td><td class="y">Andressa · praticamente empate</td></tr>
+            <tr><td><b>4 meses</b></td><td class="num">R$ 7.840</td><td class="num">R$ 6.000</td><td class="p">Thais · R$ 1.840 a menos</td></tr>
+            <tr><td><b>6 meses</b></td><td class="num">R$ 11.760</td><td class="num">R$ 6.000</td><td class="p">Thais · R$ 5.760 a menos</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">O pacote da Thais não cita cessão de direitos autorais dos professores nem autorização de imagem de pacientes; se forem cobrados à parte, o empate com a Andressa passa para depois do 3º mês.</p>
+      <div class="callout"><b>Para decidir:</b> a assessoria da Andressa sai mais barata se os contratos ficarem prontos em até 3 meses e já inclui os documentos extras. Para isso, a RM precisa chegar com as regras do curso, a lista de professores e o modelo de venda definidos. Como o prazo é livre, o contrato já pode ser fechado por 2 ou 3 meses, com renovação se precisar.</div>
+    </div>
+  </section>
+
+  <section class="band dark" id="r-passos">
+    <div class="wrap">
+      <p class="eyebrow">Próximos passos</p>
+      <h2>Ordem sugerida para a continuidade</h2>
+      <p class="lead">A PJ vem primeiro: os contratos e a conta da plataforma saem no nome dela.</p>
+      <div class="cols3">
+        <div class="box"><h3>Curto prazo · PJ</h3><ol><li>Definir sócios e participação de cada um</li><li>Contabilidade faz o contrato social e escolhe tipo societário e regime tributário</li><li>Atividade de ensino ou treinamento no CNPJ</li><li>Abrir conta bancária PJ para receber da plataforma</li></ol></div>
+        <div class="box"><h3>Curto prazo · jurídico e plataforma</h3><ol><li>Fechar o jurídico e concentrar os contratos em 2 a 3 meses, antes do lançamento</li><li>Cessão de direitos dos professores para o acervo</li><li>Criar a conta na plataforma no nome da PJ</li><li>Configurar turmas, validação de CRM e migrar o acervo</li></ol></div>
+        <div class="box"><h3>Médio prazo · marketing</h3><ol><li>Contratar a MedImpulso depois do lançamento</li><li>Começar pela Proposta 01 e ampliar com resultado</li><li>Campanha para o congresso de abril</li><li>Acompanhar vendas pelo dashboard</li></ol></div>
+      </div>
+      <div class="next" style="margin-top:36px"><a style="color:var(--sky)" href="#ferramentas">← Análise de plataformas</a><a style="color:var(--sky)" href="#inicio">Voltar aos entregáveis →</a></div>
     </div>
   </section>
 </div>
 
 </main>
 
-<footer><div class="wrap"><span>Rhinoplasty Minds | Consultoria · Adriana Gialluisi</span><span>Outubro de 2026</span></div></footer>
+<footer><div class="wrap"><span>Rhinoplasty Minds | Consultoria · Adriana Gialluisi</span><span>Novembro de 2026</span></div></footer>
 
 <script>
 (function(){
   var views=[].slice.call(document.querySelectorAll(".view"));
   var navs=[].slice.call(document.querySelectorAll(".top nav a"));
-  var anchorMap={"m-publico":"mercado","m-cenario":"mercado","m-concorrentes":"mercado","m-tabela":"mercado","m-presencial":"mercado","m-outras":"mercado","m-leitura":"mercado","f-requisitos":"ferramentas","f-formatos":"ferramentas","f-comparativo":"ferramentas","f-funcoes":"ferramentas","f-afiliados":"ferramentas","f-aovivo":"ferramentas","f-suporte":"ferramentas","f-leitura":"ferramentas"};
+  var anchorMap={"m-publico":"mercado","m-cenario":"mercado","m-concorrentes":"mercado","m-tabela":"mercado","m-presencial":"mercado","m-outras":"mercado","m-leitura":"mercado","f-requisitos":"ferramentas","f-formatos":"ferramentas","f-comparativo":"ferramentas","f-funcoes":"ferramentas","f-afiliados":"ferramentas","f-aovivo":"ferramentas","f-suporte":"ferramentas","f-leitura":"ferramentas","r-etapas":"resumo","r-plataforma":"resumo","r-preco":"resumo","r-custos":"resumo","r-passos":"resumo"};
   function route(){
     var h=(location.hash||"#inicio").slice(1);
     var v=anchorMap[h]||h;
