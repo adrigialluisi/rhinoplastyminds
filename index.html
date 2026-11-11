@@ -206,7 +206,13 @@ details.src ul{columns:2;column-gap:32px;padding-left:18px;margin-top:10px}
 details.src li{break-inside:avoid;margin-bottom:4px}
 @media (max-width:700px){details.src ul{columns:1}}
 /* plataformas */
-#v-ferramentas section[id^="f-"],#v-resumo section[id^="r-"]{scroll-margin-top:120px}
+#v-ferramentas section[id^="f-"],#v-resumo section[id^="r-"],#v-publico section[id^="p-"]{scroll-margin-top:120px}
+.bars{display:grid;gap:10px;padding-top:14px;border-top:1px solid var(--line)}
+.bar{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(60px,1fr) 28px;gap:12px;align-items:center;font-size:14px}
+.bar i{display:block;height:10px;background:#E8F2FB;border-radius:999px;overflow:hidden}
+.bar i b{display:block;height:100%;background:var(--sky);border-radius:999px}
+.bar .v{font-variant-numeric:tabular-nums;font-weight:700;text-align:right}
+#v-publico .two .cc{height:100%}
 .box ol{margin:0;padding-left:18px;color:var(--soft-d);font-size:14.5px;display:grid;gap:8px}
 .cc .src{text-decoration:none;font-weight:700}
 .fmt{border-top:1px solid var(--line)}
@@ -244,6 +250,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       <a href="#hoje" data-v="hoje">O que temos hoje</a>
       <a href="#mercado" data-v="mercado">Mercado e concorrentes</a>
       <a href="#ferramentas" data-v="ferramentas">Plataformas</a>
+      <a href="#publico" data-v="publico">Público</a>
       <a href="#resumo" data-v="resumo">Resumo e continuidade</a>
     </nav>
   </div>
@@ -270,7 +277,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
             <li><a href="#hoje">Análise do que temos hoje</a></li>
             <li><a href="#mercado">Mercado e concorrentes</a></li>
             <li><a href="#ferramentas">Análise de plataformas</a></li>
-            <li><span>Análise de público <em>em breve</em></span></li>
+            <li><a href="#publico">Análise de público</a></li>
             <li><a href="#resumo">Resumo e continuidade</a></li>
           </ul>
         </div>
@@ -995,7 +1002,153 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
           <li><a style="color:var(--sky)" href="https://www.trustpilot.com/review/teachable.com" target="_blank" rel="noopener">Trustpilot · Teachable</a></li>
         </ul>
       </details>
-      <div class="next" style="margin-top:36px"><a style="color:var(--sky)" href="#mercado">← Mercado e concorrentes</a><a style="color:var(--sky)" href="#resumo">Resumo e continuidade →</a></div>
+      <div class="next" style="margin-top:36px"><a style="color:var(--sky)" href="#mercado">← Mercado e concorrentes</a><a style="color:var(--sky)" href="#publico">Análise de público →</a></div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= PÚBLICO ================= -->
+<div class="view" id="v-publico" data-view="publico" hidden>
+  <section class="band dark">
+    <div class="wrap">
+      <p class="eyebrow">Fase 1 · Diagnóstico · 04</p>
+      <h2>Análise de público</h2>
+      <p class="lead">Pesquisa enviada pelo doutor à sua rede de cirurgiões em outubro e novembro de 2026, por WhatsApp e nos grupos onde divulga os webinars.</p>
+      <div class="kpis">
+        <div class="kpi"><b>20</b><span>respostas válidas</span><small>19 otorrinos e 1 cirurgião plástico</small></div>
+        <div class="kpi"><b>13 de 20</b><span>operam nariz há mais de 10 anos</span><small>Público experiente</small></div>
+        <div class="kpi"><b>19 de 20</b><span>dão nota 5 aos webinars</span><small>Escala de 1 a 5</small></div>
+        <div class="kpi"><b>16 de 20</b><span>têm interesse no portal</span><small>10 deles dependendo do valor</small></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="subnav-bar"><div class="wrap"><nav class="subnav" aria-label="Seções de público"><a href="#p-perfil">Perfil</a><a href="#p-webinars">Webinars</a><a href="#p-cursos">Cursos online</a><a href="#p-conteudo">Conteúdo e formato</a><a href="#p-portal">Interesse no portal</a><a href="#p-leitura">Leitura</a></nav></div></div>
+
+  <section class="band light" id="p-perfil">
+    <div class="wrap">
+      <p class="eyebrow">Perfil</p>
+      <h2>Quem respondeu</h2>
+      <div class="cgrid"><div class="cc"><div><h3>Formação</h3><p class="who">Especialidade de quem respondeu</p></div><div class="bars">
+<div class="bar"><span>Otorrinolaringologia</span><i><b style="width:95%"></b></i><span class="v">19</span></div>
+<div class="bar"><span>Cirurgia plástica</span><i><b style="width:5%"></b></i><span class="v">1</span></div>
+</div></div><div class="cc"><div><h3>Tempo operando rinoplastia</h3><p class="who">Experiência cirúrgica</p></div><div class="bars">
+<div class="bar"><span>Mais de 10 anos</span><i><b style="width:65%"></b></i><span class="v">13</span></div>
+<div class="bar"><span>6 a 10 anos</span><i><b style="width:15%"></b></i><span class="v">3</span></div>
+<div class="bar"><span>3 a 5 anos</span><i><b style="width:5%"></b></i><span class="v">1</span></div>
+<div class="bar"><span>Até 2 anos</span><i><b style="width:10%"></b></i><span class="v">2</span></div>
+<div class="bar"><span>Ainda não opera</span><i><b style="width:5%"></b></i><span class="v">1</span></div>
+</div></div></div>
+    </div>
+  </section>
+
+  <section class="band light" id="p-webinars">
+    <div class="wrap">
+      <p class="eyebrow">Webinars</p>
+      <h2>Como avaliam o Rhinoplasty Minds hoje</h2>
+      <p class="lead">19 deram nota 5 e 1 deu nota 4. O que sustenta a nota é o caso real discutido com quem opera.</p>
+      <div class="cgrid"><div class="cc"><div><h3>Participação nos webinars</h3><p class="who">Quantos webinars da RM já assistiu</p></div><div class="bars">
+<div class="bar"><span>4 ou mais</span><i><b style="width:55%"></b></i><span class="v">11</span></div>
+<div class="bar"><span>2 a 3</span><i><b style="width:30%"></b></i><span class="v">6</span></div>
+<div class="bar"><span>Apenas 1</span><i><b style="width:15%"></b></i><span class="v">3</span></div>
+</div></div><div class="cc"><div><h3>O que mais valorizam</h3><p class="who">Até 2 opções por pessoa</p></div><div class="bars">
+<div class="bar"><span>Discussão de casos reais</span><i><b style="width:70%"></b></i><span class="v">14</span></div>
+<div class="bar"><span>Conteúdo técnico</span><i><b style="width:70%"></b></i><span class="v">14</span></div>
+<div class="bar"><span>Troca com outros médicos</span><i><b style="width:60%"></b></i><span class="v">12</span></div>
+<div class="bar"><span>Tirar dúvidas ao vivo</span><i><b style="width:40%"></b></i><span class="v">8</span></div>
+<div class="bar"><span>Didática dos palestrantes</span><i><b style="width:20%"></b></i><span class="v">4</span></div>
+</div></div><div class="cc"><div><h3>O formato mensal atende?</h3><p class="who">Um webinar ao vivo por mês</p></div><div class="bars">
+<div class="bar"><span>Sim, atende bem</span><i><b style="width:65%"></b></i><span class="v">13</span></div>
+<div class="bar"><span>Gostaria de acesso às gravações</span><i><b style="width:30%"></b></i><span class="v">6</span></div>
+<div class="bar"><span>Dia ou horário nem sempre funciona</span><i><b style="width:5%"></b></i><span class="v">1</span></div>
+</div></div><div class="cc"><div><h3>O que poderia melhorar</h3><p class="who">Mais de uma opção por pessoa</p></div><div class="bars">
+<div class="bar"><span>Nada, está ótimo</span><i><b style="width:50%"></b></i><span class="v">10</span></div>
+<div class="bar"><span>Mais casos e vídeos de cirurgia</span><i><b style="width:40%"></b></i><span class="v">8</span></div>
+<div class="bar"><span>Temas mais avançados</span><i><b style="width:10%"></b></i><span class="v">2</span></div>
+<div class="bar"><span>Outros</span><i><b style="width:20%"></b></i><span class="v">4</span></div>
+</div><p class="note" style="margin-top:4px">Outros: temas introdutórios, gravações, mais tempo para perguntas, casos complexos.</p></div></div>
+    </div>
+  </section>
+
+  <section class="band light" id="p-cursos">
+    <div class="wrap">
+      <p class="eyebrow">Cursos online</p>
+      <h2>Pouca experiência com cursos, motivação clara para comprar</h2>
+      <div class="cgrid"><div class="cc"><div><h3>Já fez curso online de rinoplastia?</h3><p class="who">Experiência com cursos</p></div><div class="bars">
+<div class="bar"><span>Não</span><i><b style="width:65%"></b></i><span class="v">13</span></div>
+<div class="bar"><span>Sim, já fez</span><i><b style="width:30%"></b></i><span class="v">6</span></div>
+<div class="bar"><span>Sim, está fazendo</span><i><b style="width:5%"></b></i><span class="v">1</span></div>
+</div><p class="note" style="margin-top:4px">Cursos citados: Renato Bittar, Rhinoface Academy, Nakamura (Perface), MedHandsOn e Plasticflix.</p></div><div class="cc"><div><h3>O que faria investir em um curso</h3><p class="who">Até 3 opções por pessoa</p></div><div class="bars">
+<div class="bar"><span>Aprimorar uma técnica específica</span><i><b style="width:55%"></b></i><span class="v">11</span></div>
+<div class="bar"><span>Discutir casos com cirurgiões mais experientes</span><i><b style="width:55%"></b></i><span class="v">11</span></div>
+<div class="bar"><span>Trocar experiências com outros cirurgiões</span><i><b style="width:45%"></b></i><span class="v">9</span></div>
+<div class="bar"><span>Aumentar o volume de cirurgias</span><i><b style="width:30%"></b></i><span class="v">6</span></div>
+<div class="bar"><span>Conteúdo organizado para rever</span><i><b style="width:30%"></b></i><span class="v">6</span></div>
+<div class="bar"><span>Reduzir complicações e revisões</span><i><b style="width:30%"></b></i><span class="v">6</span></div>
+<div class="bar"><span>Mais segurança para operar</span><i><b style="width:25%"></b></i><span class="v">5</span></div>
+<div class="bar"><span>Certificado</span><i><b style="width:10%"></b></i><span class="v">2</span></div>
+</div></div></div>
+    </div>
+  </section>
+
+  <section class="band light" id="p-conteudo">
+    <div class="wrap">
+      <p class="eyebrow">Conteúdo e formato</p>
+      <h2>O que o curso precisa ter</h2>
+      <div class="cgrid"><div class="cc"><div><h3>Temas mais importantes hoje</h3><p class="who">Até 2 opções por pessoa</p></div><div class="bars">
+<div class="bar"><span>Rinoplastia secundária</span><i><b style="width:60%"></b></i><span class="v">12</span></div>
+<div class="bar"><span>Ponta nasal</span><i><b style="width:50%"></b></i><span class="v">10</span></div>
+<div class="bar"><span>Pós-operatório e complicações</span><i><b style="width:40%"></b></i><span class="v">8</span></div>
+<div class="bar"><span>Dorso e osteotomias</span><i><b style="width:35%"></b></i><span class="v">7</span></div>
+<div class="bar"><span>Enxertos e cartilagem</span><i><b style="width:20%"></b></i><span class="v">4</span></div>
+<div class="bar"><span>Planejamento pré-operatório</span><i><b style="width:15%"></b></i><span class="v">3</span></div>
+<div class="bar"><span>Fotografia e comunicação com o paciente</span><i><b style="width:15%"></b></i><span class="v">3</span></div>
+</div></div><div class="cc"><div><h3>Formatos que mais aproveitariam</h3><p class="who">Até 3 opções por pessoa</p></div><div class="bars">
+<div class="bar"><span>Aulas gravadas por tema</span><i><b style="width:70%"></b></i><span class="v">14</span></div>
+<div class="bar"><span>Cirurgias filmadas com narração</span><i><b style="width:70%"></b></i><span class="v">14</span></div>
+<div class="bar"><span>Comunidade online de médicos</span><i><b style="width:35%"></b></i><span class="v">7</span></div>
+<div class="bar"><span>Discussão de casos dos alunos</span><i><b style="width:30%"></b></i><span class="v">6</span></div>
+<div class="bar"><span>Materiais para download</span><i><b style="width:25%"></b></i><span class="v">5</span></div>
+<div class="bar"><span>Lives de perguntas e respostas</span><i><b style="width:10%"></b></i><span class="v">2</span></div>
+</div></div><div class="cc"><div><h3>Tempo por semana para o curso</h3><p class="who">Disponibilidade</p></div><div class="bars">
+<div class="bar"><span>Até 1 hora</span><i><b style="width:70%"></b></i><span class="v">14</span></div>
+<div class="bar"><span>1 a 3 horas</span><i><b style="width:30%"></b></i><span class="v">6</span></div>
+</div></div><div class="cc"><div><h3>Em quanto tempo esperam resultado</h3><p class="who">Na própria técnica</p></div><div class="bars">
+<div class="bar"><span>Até 3 meses</span><i><b style="width:50%"></b></i><span class="v">10</span></div>
+<div class="bar"><span>6 meses</span><i><b style="width:20%"></b></i><span class="v">4</span></div>
+<div class="bar"><span>1 ano</span><i><b style="width:20%"></b></i><span class="v">4</span></div>
+<div class="bar"><span>Mais de 1 ano</span><i><b style="width:5%"></b></i><span class="v">1</span></div>
+</div><p class="note" style="margin-top:4px">Uma pessoa não respondeu.</p></div></div>
+    </div>
+  </section>
+
+  <section class="band light" id="p-portal">
+    <div class="wrap">
+      <p class="eyebrow">Interesse no portal</p>
+      <h2>Interesse alto, decisão condicionada ao preço</h2>
+      <div class="two"><div class="cc"><div><h3>Interesse no portal completo</h3><p class="who">Curso, comunidade, agenda de congressos e rede de parceiros</p></div><div class="bars">
+<div class="bar"><span>Muito interesse, entraria assim que abrisse</span><i><b style="width:30%"></b></i><span class="v">6</span></div>
+<div class="bar"><span>Tem interesse, dependendo do valor</span><i><b style="width:50%"></b></i><span class="v">10</span></div>
+<div class="bar"><span>Interesse apenas no curso online</span><i><b style="width:5%"></b></i><span class="v">1</span></div>
+<div class="bar"><span>Pouco interesse no momento</span><i><b style="width:15%"></b></i><span class="v">3</span></div>
+</div></div><div class="callout" style="margin-top:0"><b>Para a RM:</b> 16 de 20 querem fazer parte, mas 10 deles condicionam ao valor. O preço é a principal variável de conversão; a faixa sugerida está em <a href="#r-preco">Resumo e continuidade</a>.</div></div>
+    </div>
+  </section>
+
+  <section class="band dark" id="p-leitura">
+    <div class="wrap">
+      <p class="eyebrow">Leitura para a Rhinoplasty Minds</p>
+      <h2>O que a pesquisa indica</h2>
+      <div class="takeaways">
+        <div class="tk"><div class="n">1</div><div><h3>Curso para quem já opera</h3><p>13 de 20 operam há mais de 10 anos. O conteúdo deve ir além do básico: aprimorar técnica, revisar casos e reduzir complicações.</p></div></div>
+        <div class="tk"><div class="n">2</div><div><h3>Secundária e ponta abrem a grade</h3><p>Rinoplastia secundária (12) e ponta nasal (10) lideram, seguidas de pós-operatório e complicações (8). São os primeiros módulos a montar com o acervo.</p></div></div>
+        <div class="tk"><div class="n">3</div><div><h3>Aulas curtas, por tema, com cirurgia narrada</h3><p>14 dedicam até 1 hora por semana e 14 preferem aulas por tema e cirurgias narradas. Capítulos de 10 a 20 minutos cabem nessa rotina.</p></div></div>
+        <div class="tk"><div class="n">4</div><div><h3>A troca entre cirurgiões vende</h3><p>Discutir casos com quem tem mais experiência (11) e trocar com colegas (9) pesam tanto quanto a técnica. Comunidade e webinar ao vivo entram no valor do curso.</p></div></div>
+        <div class="tk"><div class="n">5</div><div><h3>O mercado ainda está aberto</h3><p>13 de 20 nunca fizeram curso online de rinoplastia. A RM disputa pouco com concorrentes nessa base.</p></div></div>
+        <div class="tk"><div class="n">6</div><div><h3>Amostra pequena e próxima do doutor</h3><p>20 respostas, quase todas de otorrinos que já acompanham a RM. Serve para orientar o curso; não representa cirurgiões plásticos nem quem ainda não conhece a marca.</p></div></div>
+      </div>
+      <p class="note" style="color:var(--gray-d)">Fonte: formulário “Curso online de rinoplastia: o que você gostaria de encontrar?”, respostas de 22/10 a 11/11/2026. Excluída uma resposta de teste do Dr. Marco Antonio. Perguntas de múltipla escolha somam mais de 20.</p>
+      <div class="next" style="margin-top:36px"><a style="color:var(--sky)" href="#ferramentas">← Análise de plataformas</a><a style="color:var(--sky)" href="#resumo">Resumo e continuidade →</a></div>
     </div>
   </section>
 </div>
@@ -1026,7 +1179,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <div class="cc"><div><span class="tag">Etapa 01</span><h3 style="margin-top:8px">O que temos hoje</h3></div><p style="color:var(--gray)">Acervo de webinars mensais desde 2023, com convidados reconhecidos e formato de casos reais. A estrutura depende de upload manual, os vídeos podem ser baixados e o acervo só se organiza por data.</p><a class="src" href="#hoje">Ver etapa →</a></div>
         <div class="cc"><div><span class="tag">Etapa 02</span><h3 style="margin-top:8px">Mercado e concorrentes</h3></div><p style="color:var(--gray)">Público comprador de 3 a 4 mil cirurgiões. Cursos online custam em média R$ 6,3 mil e quase todos vendem o método de um único autor. A RM tem espaço como escola de vários professores.</p><a class="src" href="#mercado">Ver etapa →</a></div>
         <div class="cc"><div><span class="tag">Etapa 03</span><h3 style="margin-top:8px">Plataformas</h3></div><p style="color:var(--gray)">12 opções avaliadas. A Hotmart é a única que cobre acesso com CRM, vídeo, live, comunidade e e-mail sem mensalidade. A DeuLaudo oferece marca própria, mas cobre só parte e o preço ainda não chegou.</p><a class="src" href="#ferramentas">Ver etapa →</a></div>
-        <div class="cc"><div><span class="tag">Etapa 04</span><h3 style="margin-top:8px">Público · pesquisa com a rede</h3></div><p style="color:var(--gray)">20 respostas, 19 de otorrinos, a maioria operando há mais de 10 anos. Querem aulas gravadas por tema e cirurgias narradas, dedicam até 1 hora por semana, e 16 de 20 têm interesse no portal, 10 deles dependendo do valor.</p><span class="src" style="color:var(--gray)">Análise completa em breve</span></div>
+        <div class="cc"><div><span class="tag">Etapa 04</span><h3 style="margin-top:8px">Público · pesquisa com a rede</h3></div><p style="color:var(--gray)">20 respostas, 19 de otorrinos, a maioria operando há mais de 10 anos. Querem aulas gravadas por tema e cirurgias narradas, dedicam até 1 hora por semana, e 16 de 20 têm interesse no portal, 10 deles dependendo do valor.</p><a class="src" href="#publico">Ver etapa →</a></div>
       </div>
     </div>
   </section>
@@ -1154,7 +1307,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <div class="box"><h3>Curto prazo · jurídico e plataforma</h3><ol><li>Fechar o jurídico e concentrar os contratos em 2 a 3 meses, antes do lançamento</li><li>Cessão de direitos dos professores para o acervo</li><li>Criar a conta na plataforma no nome da PJ</li><li>Configurar turmas, validação de CRM e migrar o acervo</li></ol></div>
         <div class="box"><h3>Médio prazo · marketing</h3><ol><li>Contratar a MedImpulso depois do lançamento</li><li>Começar pela Proposta 01 e ampliar com resultado</li><li>Campanha para o congresso de abril</li><li>Acompanhar vendas pelo dashboard</li></ol></div>
       </div>
-      <div class="next" style="margin-top:36px"><a style="color:var(--sky)" href="#ferramentas">← Análise de plataformas</a><a style="color:var(--sky)" href="#inicio">Voltar aos entregáveis →</a></div>
+      <div class="next" style="margin-top:36px"><a style="color:var(--sky)" href="#publico">← Análise de público</a><a style="color:var(--sky)" href="#inicio">Voltar aos entregáveis →</a></div>
     </div>
   </section>
 </div>
@@ -1167,7 +1320,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 (function(){
   var views=[].slice.call(document.querySelectorAll(".view"));
   var navs=[].slice.call(document.querySelectorAll(".top nav a"));
-  var anchorMap={"m-publico":"mercado","m-cenario":"mercado","m-concorrentes":"mercado","m-tabela":"mercado","m-presencial":"mercado","m-outras":"mercado","m-leitura":"mercado","f-requisitos":"ferramentas","f-formatos":"ferramentas","f-comparativo":"ferramentas","f-funcoes":"ferramentas","f-afiliados":"ferramentas","f-aovivo":"ferramentas","f-suporte":"ferramentas","f-leitura":"ferramentas","r-etapas":"resumo","r-plataforma":"resumo","r-preco":"resumo","r-custos":"resumo","r-passos":"resumo"};
+  var anchorMap={"m-publico":"mercado","m-cenario":"mercado","m-concorrentes":"mercado","m-tabela":"mercado","m-presencial":"mercado","m-outras":"mercado","m-leitura":"mercado","f-requisitos":"ferramentas","f-formatos":"ferramentas","f-comparativo":"ferramentas","f-funcoes":"ferramentas","f-afiliados":"ferramentas","f-aovivo":"ferramentas","f-suporte":"ferramentas","f-leitura":"ferramentas","p-perfil":"publico","p-webinars":"publico","p-cursos":"publico","p-conteudo":"publico","p-portal":"publico","p-leitura":"publico","r-etapas":"resumo","r-plataforma":"resumo","r-preco":"resumo","r-custos":"resumo","r-passos":"resumo"};
   function route(){
     var h=(location.hash||"#inicio").slice(1);
     var v=anchorMap[h]||h;
